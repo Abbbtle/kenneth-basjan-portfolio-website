@@ -3,6 +3,7 @@ import { kenneth1 } from '../assets';
 import HorizontalRule from './HorizontalRule';
 import {LuGraduationCap} from "react-icons/lu";
 import {FaUserTie} from "react-icons/fa";
+import TechStack from './TechStack';
 
 const About = () => {
   return (
@@ -101,12 +102,12 @@ const About = () => {
             </div>
           </div>
 
-          {/* Experience Heading */}
+          {/* Tech Stack Heading */}
           <h3 className='text-4xl font-semibold text-white mt-10'>
             Tech Stack
             <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
           </h3>
-
+          <TechStack/>
         </div>
 
       </div>
