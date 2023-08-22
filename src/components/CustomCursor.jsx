@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-import '../index.css';
+import '../index.css'
 
 const CustomCursor = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const updateCursorPosition = (e) => {
-      const { clientX, clientY } = e;
-      setCursorPosition({ x: clientX, y: clientY });
-    };
+  const updateCursorPosition = (e) => {
+    setCursorPosition({
+      x: e.clientX,
+      y: e.clientY,
+    });
+  };
 
+  useEffect(() => {
     document.addEventListener("mousemove", updateCursorPosition);
 
     return () => {
@@ -20,7 +22,11 @@ const CustomCursor = () => {
   return (
     <div
       className="custom-cursor"
-      style={{ left: cursorPosition.x, top: cursorPosition.y }}
+      style={{
+        left: cursorPosition.x,
+        top: cursorPosition.y,
+        position: "fixed", // Use fixed position
+      }}
     ></div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import HorizontalRule from './HorizontalRule';
 import Button1 from './Button1';
 
+
 const Hero = () => {
   return (
     <div className='flex flex-col justify-center'>
