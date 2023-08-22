@@ -65,7 +65,7 @@ const About = () => {
             <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
           </h3>
 
-          {/* Institution 1 Details */}
+          {/* Work Experience 1 Details */}
           <div className='flex items-center'>
             <div className='mr-5 text-[25px] text-white'>
             <FaUserTie/>
@@ -77,7 +77,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Institution 2 Details */}
+          {/* Work Experience 2 Details */}
           <div className='flex mt-10 items-center'>
             <div className='mr-5 text-[25px] text-white'>
             <FaUserTie/>
@@ -89,7 +89,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Institution 3 Details */}
+          {/* Work Experience 3 Details */}
           <div className='flex mt-10 items-center'>
             <div className='mr-5 text-[25px] text-white'>
             <FaUserTie/>
@@ -100,6 +100,12 @@ const About = () => {
               <p className='text-[#906EF0]'>July 2023 - Present</p>
             </div>
           </div>
+
+          {/* Experience Heading */}
+          <h3 className='text-4xl font-semibold text-white mt-10'>
+            Tech Stack
+            <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
+          </h3>
 
         </div>
 
