@@ -2,6 +2,7 @@ import React from 'react'
 import { kenneth1 } from '../assets';
 import HorizontalRule from './HorizontalRule';
 import {LuGraduationCap} from "react-icons/lu";
+import {FaUserTie} from "react-icons/fa";
 
 const About = () => {
   return (
@@ -35,7 +36,7 @@ const About = () => {
           </h3>
 
           {/* Institution 1 Details */}
-          <div className='flex'>
+          <div className='flex items-center'>
             <div className='mr-5 text-[25px] text-white'>
             <LuGraduationCap/>
             </div>
@@ -47,7 +48,7 @@ const About = () => {
           </div>
 
           {/* Institution 2 Details */}
-          <div className='flex mt-10'>
+          <div className='flex mt-10 items-center'>
             <div className='mr-5 text-[25px] text-white'>
             <LuGraduationCap/>
             </div>
@@ -58,7 +59,47 @@ const About = () => {
             </div>
           </div>
 
-          
+          {/* Experience Heading */}
+          <h3 className='text-4xl font-semibold text-white mt-10'>
+            Experience
+            <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
+          </h3>
+
+          {/* Institution 1 Details */}
+          <div className='flex items-center'>
+            <div className='mr-5 text-[25px] text-white'>
+            <FaUserTie/>
+            </div>
+            <div>
+              <p className='text-[18px] font-semibold text-white'>Founder</p>
+              <p className='text-white text-[16px]'>Weberu</p>
+              <p className='text-[#906EF0]'>Nov 2021 - Present</p>
+            </div>
+          </div>
+
+          {/* Institution 2 Details */}
+          <div className='flex mt-10 items-center'>
+            <div className='mr-5 text-[25px] text-white'>
+            <FaUserTie/>
+            </div>
+            <div>
+              <p className='text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
+              <p className='text-white text-[16px]'>UVU Africa - Capaciti Division</p>
+              <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
+            </div>
+          </div>
+
+          {/* Institution 3 Details */}
+          <div className='flex mt-10 items-center'>
+            <div className='mr-5 text-[25px] text-white'>
+            <FaUserTie/>
+            </div>
+            <div>
+              <p className='text-[18px] font-semibold text-white'>Junior Software Developer</p>
+              <p className='text-white text-[16px]'>Younglings Africa</p>
+              <p className='text-[#906EF0]'>July 2023 - Present</p>
+            </div>
+          </div>
 
         </div>
 
