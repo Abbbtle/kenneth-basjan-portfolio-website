@@ -5,6 +5,20 @@ module.exports = {
   ],
   theme: {
 
+    animation: {
+      marquee: 'marquee 10s linear infinite',
+    },
+    keyframes: {
+      marquee: {
+        '0%': { transform: 'translateX(0%)' },
+        '100%': { transform: 'translateX(-100%)' },
+      },
+      marquee2: {
+        '0%': { transform: 'translateX(100%)' },
+        '100%': { transform: 'translateX(0%)' },
+      },
+    },
+
     screens: {
       'sm': '320px',
       // => @media (min-width: 320px) { ... }
