@@ -117,3 +117,19 @@ button:focus-visible {
   mix-blend-mode: difference;
   transition: width 0.2s, height 0.2s;
 }
+
+/* ========== Scroll ========== */
+
+/* Tailwind classes for the scrolling container */
+.scrolling-container {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Tailwind classes for the scrolling content */
+.scrolling-content {
+  display: inline-block;
+  font-size: 200px;
+}
+

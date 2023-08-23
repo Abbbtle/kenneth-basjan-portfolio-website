@@ -6,7 +6,7 @@ import Work from "./Work";
 import Info from "./Info";
 import Flow from "./Flow";
 import Testimonials from "./Testimonials";
-import Transition from "./Transition";
+import ScrollingText from "./ScrollingText";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import CustomCursor from "./CustomCursor";
@@ -21,7 +21,7 @@ export {
     Info,
     Flow,
     Testimonials,
-    Transition,
+    ScrollingText,
     Contact,
     Footer,
     CustomCursor

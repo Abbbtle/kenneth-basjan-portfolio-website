@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Navbar, Hero, About, Services, Work, Info, Flow, Testimonials, Transition, Contact, Footer, CustomCursor } from "./components";
+import { Navbar, Hero, About, Services, Work, Info, Flow, Testimonials, ScrollingText, Contact, Footer, CustomCursor } from "./components";
 import './index.css'
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
         <Info/>
         <Flow/>
         <Testimonials/>
-        <Transition/>
+        <ScrollingText/>
         <Contact/>
         <Footer/>
         <CustomCursor/>
