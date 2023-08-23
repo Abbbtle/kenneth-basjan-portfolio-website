@@ -4,8 +4,8 @@ import HorizontalRule from './HorizontalRule'
 const Work = () => {
   return (
     <div>
-      {/* Work Heading */}
-      <h2 className='text-[72px] font-bold text-white uppercase text-center mt-10 mb-[-40px]'>
+      {/* Work Heading */} 
+      <h2 className='text-[72px] font-bold text-white uppercase text-center mt-40 mb-[-40px]'>
         Exploring
       </h2>
       <h2 className='text-[72px] font-bold text-[#906EF0] uppercase text-center'>
