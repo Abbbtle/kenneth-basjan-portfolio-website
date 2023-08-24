@@ -1,9 +1,18 @@
 import React from 'react'
+import {logo} from '../assets';
+import FLine from './FLine';
 
-function Footer() {
-  return (
-    <div>Footer</div>
-  )
-}
+const Footer = () => {
+  return(
+    <div>
+      {/* horizontal footer line */}
+      <div className='mt-40'>
+        <FLine/>
+      </div>
+
+      
+    </div>
+  );
+};
 
 export default Footer
