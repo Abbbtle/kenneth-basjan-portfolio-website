@@ -4,6 +4,7 @@ import HorizontalRule from './HorizontalRule';
 import {LuGraduationCap} from "react-icons/lu";
 import {FaUserTie} from "react-icons/fa";
 import TechStack from './TechStack';
+import Button2 from './Button2';
 
 const About = () => {
   return (
@@ -45,6 +46,10 @@ const About = () => {
               <p className='text-[18px] font-semibold text-white'>National Diploma in Information Technology</p>
               <p className='text-white text-[16px]'>Central University of Technology: Bloemfontein</p>
               <p className='text-[#906EF0]'>Jan 2016 - Nov 2019</p>
+              <div className='flex mt-2'>
+                <div className='md:mr-2'><Button2>Description</Button2></div>
+                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              </div>
             </div>
           </div>
 
@@ -57,6 +62,10 @@ const About = () => {
               <p className='text-[18px] font-semibold text-white'>Creative Business 101 for Videographers</p>
               <p className='text-white text-[16px]'>ORMS Cape Town School of Photography</p>
               <p className='text-[#906EF0]'>Aug 2021</p>
+              <div className='flex mt-2'>
+                <div className='md:mr-2'><Button2>Description</Button2></div>
+                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              </div>
             </div>
           </div>
 
@@ -75,6 +84,10 @@ const About = () => {
               <p className='text-[18px] font-semibold text-white'>Founder</p>
               <p className='text-white text-[16px]'>Weberu</p>
               <p className='text-[#906EF0]'>Nov 2021 - Present</p>
+              <div className='flex mt-2'>
+                <div className='md:mr-2'><Button2>Description</Button2></div>
+                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              </div>
             </div>
           </div>
 
@@ -87,6 +100,10 @@ const About = () => {
               <p className='text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
               <p className='text-white text-[16px]'>UVU Africa - Capaciti Division</p>
               <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
+              <div className='flex mt-2'>
+                <div className='md:mr-2'><Button2>Description</Button2></div>
+                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              </div>
             </div>
           </div>
 
@@ -99,6 +116,10 @@ const About = () => {
               <p className='text-[18px] font-semibold text-white'>Junior Software Developer</p>
               <p className='text-white text-[16px]'>Younglings Africa</p>
               <p className='text-[#906EF0]'>July 2023 - Present</p>
+              <div className='flex mt-2'>
+                <div className='md:mr-2'><Button2>Description</Button2></div>
+                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              </div>
             </div>
           </div>
 
