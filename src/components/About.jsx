@@ -7,7 +7,7 @@ import TechStack from './TechStack';
 
 const About = () => {
   return (
-    <div name='about' className='bg-white mx-10 mt-10 pb-10 pt-1 rounded-3xl'>
+    <div name='about' className='bg-white mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
       <div className='mx-10 mt-10'>
 
         <h2 className='text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>

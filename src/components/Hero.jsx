@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className='flex flex-col justify-center'>
       <div className='uppercase text-[38px] text-center font-bold'>
-        <h1>Elevate Your <br/><span className='text-[#906EF0]'>Digital Presence</span></h1>
+        <span><h1>Elevate Your <br/><span className='text-[#906EF0]'>Digital Presence</span></h1></span>
       </div>
       <div className='text-center font-semibold'>
         <h3 className='text-[46px]'>Welcome to the World of <span className='text-[#906EF0]'>Innovation</span> and <span className='text-[#906EF0]'>Functionality</span></h3>
