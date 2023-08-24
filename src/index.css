@@ -121,15 +121,15 @@ button:focus-visible {
 /* ========== Scroll ========== */
 
 /* Tailwind classes for the scrolling container */
-.scrolling-container {
+/* .scrolling-container {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-}
+} */
 
 /* Tailwind classes for the scrolling content */
-.scrolling-content {
+/* .scrolling-content {
   display: inline-block;
   font-size: 200px;
-}
+} */ 
 
