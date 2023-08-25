@@ -97,7 +97,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter your name"
           />
-          {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
+          {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -112,7 +112,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter your email address"
           />
-          {errors.name && <p className="text-red-500 text-xs italic">{errors.email}</p>}
+          {errors.name && <p className="text-red-500 text-xs">{errors.email}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -127,7 +127,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter subject"
           />
-          {errors.name && <p className="text-red-500 text-xs italic">{errors.subject}</p>}
+          {errors.name && <p className="text-red-500 text-xs">{errors.subject}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -142,7 +142,7 @@ const Contact = () => {
             placeholder="Write your message here"
             rows="10"
           />
-          {errors.name && <p className="text-red-500 text-xs italic">{errors.message}</p>}
+          {errors.name && <p className="text-red-500 text-xs">{errors.message}</p>}
           </div>
 
           <div type="submit" className="text-right mt-5 mr-12 mb-5">
