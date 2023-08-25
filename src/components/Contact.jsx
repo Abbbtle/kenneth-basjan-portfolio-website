@@ -11,6 +11,53 @@ const Contact = () => {
     message: "",
   });
 
+  // Validation
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
+
+    if (!formData.name) {
+      newErrors.name = "Please enter your name";
+      isValid = false;
+    } else {
+      newErrors.name = "";
+    }
+
+    if (!formData.email) {
+      newErrors.email = "Please enter your email address";
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+      isValid = false;
+    } else {
+      newErrors.email = "";
+    }
+
+    if (!formData.subject) {
+      newErrors.subject = "Please enter a subject";
+      isValid = false;
+    } else {
+      newErrors.subject = "";
+    }
+
+    if (!formData.message) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    } else {
+      newErrors.message = "";
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -21,10 +68,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Submission logic here
+    if (validateForm()) {
+      console.log("Form submitted:", formData);
+      // Submission logic here
+    }
   };
-
   return (
     <div>
       {/* Contact Heading */}
@@ -49,6 +97,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter your name"
           />
+          {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -63,6 +112,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter your email address"
           />
+          {errors.name && <p className="text-red-500 text-xs italic">{errors.email}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -77,6 +127,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter subject"
           />
+          {errors.name && <p className="text-red-500 text-xs italic">{errors.subject}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -91,6 +142,7 @@ const Contact = () => {
             placeholder="Write your message here"
             rows="10"
           />
+          {errors.name && <p className="text-red-500 text-xs italic">{errors.message}</p>}
           </div>
 
           <div type="submit" className="text-right mt-5 mr-12 mb-5">
