@@ -22,7 +22,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // You can add your form submission logic here
+    // Submission logic here
   };
 
   return (
@@ -34,14 +34,14 @@ const Contact = () => {
       </h2>
 
       {/* Contact Form */}
-      <div className='border-solid border-[#808080] border-[1px] rounded-3xl mx-16 mt-16'>
+      <div className='border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-16 mt-16 shadow-2xl shadow-black'>
         <h4 className='text-center mt-3'>New Message</h4>
 
         <form className="rounded-3xl" onSubmit={handleSubmit}>
           <div className="ml-8 mt-10">
             <label htmlFor="name">Name: </label>
             <input
-            className="appearance-none rounded ml-5 w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded ml-3 bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="name"
             name="name"
@@ -55,11 +55,11 @@ const Contact = () => {
           <div className="ml-8 mt-10">
             <label htmlFor="name">Email: </label>
             <input
-            className="appearance-none rounded ml-6 w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded ml-4 bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             id="email"
             name="email"
-            value={formData.name}
+            value={formData.email}
             onChange={handleChange}
             placeholder="Enter your email address"
           />
@@ -69,11 +69,11 @@ const Contact = () => {
           <div className="ml-8 mt-10">
             <label htmlFor="name">Subject: </label>
             <input
-            className="appearance-none rounded ml-2 w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded  bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="subject"
             name="subject"
-            value={formData.name}
+            value={formData.subject}
             onChange={handleChange}
             placeholder="Enter subject"
           />
@@ -82,11 +82,11 @@ const Contact = () => {
 
           <div className="ml-8 mt-10">
             <textarea
-            className="appearance-none rounded text-[#1E1E1E]  w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded text-white bg-[#0D0D0D]  w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="message"
             id="message"
             name="message"
-            value={formData.name}
+            value={formData.message}
             onChange={handleChange}
             placeholder="Write your message here"
             rows="10"
