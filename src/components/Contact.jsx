@@ -123,7 +123,7 @@ const Contact = () => {
           <div className="ml-8 mt-10">
             <label htmlFor="name">Subject: </label>
             <input
-            className="appearance-none rounded  bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="subject"
             name="subject"
@@ -138,7 +138,7 @@ const Contact = () => {
           {/* Message Textarea */}
           <div className="ml-8 mt-10">
             <textarea
-            className="appearance-none rounded text-white bg-[#0D0D0D]  w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="message"
             id="message"
             name="message"
