@@ -86,6 +86,8 @@ const Contact = () => {
         <h4 className='text-center mt-3'>New Message</h4>
 
         <form className="rounded-3xl" onSubmit={handleSubmit}>
+
+          {/* Name Field */}
           <div className="ml-8 mt-10">
             <label htmlFor="name">Name: </label>
             <input
@@ -101,6 +103,7 @@ const Contact = () => {
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
+          {/* Email Field */}
           <div className="ml-8 mt-10">
             <label htmlFor="name">Email: </label>
             <input
@@ -116,6 +119,7 @@ const Contact = () => {
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
+          {/* Subject Field */}
           <div className="ml-8 mt-10">
             <label htmlFor="name">Subject: </label>
             <input
@@ -131,6 +135,7 @@ const Contact = () => {
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
+          {/* Message Textarea */}
           <div className="ml-8 mt-10">
             <textarea
             className="appearance-none rounded text-white bg-[#0D0D0D]  w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -145,6 +150,7 @@ const Contact = () => {
           {errors.name && <p className="text-red-500 text-xs">{errors.message}</p>}
           </div>
 
+          {/* submit Button */}
           <div type="submit" className="text-right mt-5 mr-12 mb-5">
           <Button1>
             Send
