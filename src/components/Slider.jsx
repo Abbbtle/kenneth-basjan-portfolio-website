@@ -1,60 +1,62 @@
 import React, { useState } from "react";
-import {FaReact} from 'react-icons/fa';
-import {SiTailwindcss} from 'react-icons/si';
-import {FaHtml5} from 'react-icons/fa';
-import {SiCss3} from 'react-icons/si';
-import {IoLogoJavascript} from 'react-icons/io'
-import {BsGit} from 'react-icons/bs'
-import {CgFigma} from 'react-icons/cg'
-import {react} from '../assets'
+import {react, git, github, wordpress, vite, vscode, css3, html5, javascript, figma, tailwind} from '../assets';
 
 const techStackData = [
   {
     name: "Tailwind CSS",
     category: "Styling",
-    icon: {SiTailwindcss},
+    icon: {tailwind},
   },
   {
     name: "ReactJS",
     category: "Web Framework",
-    image: {react},
+    icon: {react},
+  },
+  {
+    name: "Github",
+    category: "Version Control",
+    icon: {github},
+  },
+  {
+    name: "Git",
+    category: "Version Control",
+    icon: {git},
+  },
+  {
+    name: "WordPress",
+    category: "CMS",
+    icon: {wordpress},
   },
   {
     name: "Figma",
     category: "UI/UX",
-    icon: {CgFigma},
+    icon: {figma},
   },
   {
     name: "HTML",
-    category: "Web Framework",
-    icon: {FaHtml5},
+    category: "Hypertext Markup Language",
+    icon: {html5},
   },
   {
     name: "CSS",
-    category: "Web Framework",
-    icon: {SiCss3},
+    category: "Cascading Style Sheets.",
+    icon: {css3},
   },
   {
-    name: "JavaScript",
-    category: "Web Framework",
-    icon: {IoLogoJavascript},
+    name: "Javascript",
+    category: "Programming Language",
+    icon: {javascript},
   },
   {
-    name: "Git",
-    category: "Web Framework",
-    icon: {BsGit},
+    name: "Vite",
+    category: "Build Tool",
+    icon: {vite},
   },
   {
-    name: "WordPress",
-    category: "Web Framework",
-    icon: {BsGit},
-  },
-  {
-    name: "Elementor",
-    category: "Web Framework",
-    icon: {BsGit},
-  },
-  
+    name: "VS Code",
+    category: "Code Editor",
+    icon: {vscode},
+  }
 ];
 
 const Slider = () => {
@@ -84,7 +86,7 @@ const Slider = () => {
         {techStackData.slice(currentIndex, currentIndex + 3).map((software, index) => (
           <div key={index} className="w-64 bg-[#0D0D0D] shadow-md rounded p-4">
             <img
-              src={software.image}
+              src={software.icon}
               alt={software.name}
               className="w-32 mx-auto mb-4"
             />
