@@ -1,46 +1,57 @@
 import React, { useState } from "react";
-import {react, git, github, wordpress, vite, vscode, css3, html5, javascript, figma, tailwind} from '../assets';
+// import { git, github, wordpress, vite, vscode, css3, html5, javascript, figma, tailwind} from '../assets';
+import react from '../assets/Images/Logos/react.svg'
+import vite from '../assets/Images/Logos/vite.svg'
+import figma from '../assets/Images/Logos/figma.png'
+import wordpress from '../assets/Images/Logos/wordpress.png'
+import html5 from '../assets/Images/Logos/html5.svg'
+import git from '../assets/Images/Logos/git.png'
+import css3 from '../assets/Images/Logos/css3.svg'
+import javascript from '../assets/Images/Logos/javascript.png'
+import tailwind from '../assets/Images/Logos/tailwind.png'
+import github from '../assets/Images/Logos/github.png'
+import vscode from '../assets/Images/Logos/vscode.png'
 
 const techStackData = [
   {
     name: "Tailwind CSS",
     category: "Styling",
-    image: {tailwind},
+    image: tailwind,
   },
   {
     name: "ReactJS",
     category: "Web Framework",
-    image: {react},
+    image: react,
   },
   {
     name: "Github",
     category: "Version Control",
-    image: {github},
+    image: github,
   },
   {
     name: "Git",
     category: "Version Control",
-    image: {git},
+    image: git,
   },
   {
     name: "WordPress",
     category: "CMS",
-    image: {wordpress},
+    image: wordpress,
   },
   {
     name: "Figma",
     category: "UI/UX",
-    image: {figma},
+    image: figma,
   },
   {
     name: "HTML",
     category: "Hypertext Markup Language",
-    image: {html5},
+    image: html5,
   },
   {
     name: "CSS",
     category: "Cascading Style Sheets.",
-    image: {css3},
+    image: css3,
   },
   {
     name: "Javascript",
@@ -50,12 +61,12 @@ const techStackData = [
   {
     name: "Vite",
     category: "Build Tool",
-    image: {vite},
+    image: vite,
   },
   {
     name: "VS Code",
     category: "Code Editor",
-    image: {vscode},
+    image: vscode,
   }
 ];
 
