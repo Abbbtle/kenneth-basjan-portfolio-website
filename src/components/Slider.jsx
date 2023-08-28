@@ -9,7 +9,7 @@ import git from '../assets/Images/Logos/git.png'
 import css3 from '../assets/Images/Logos/css3.svg'
 import javascript from '../assets/Images/Logos/javascript.png'
 import tailwind from '../assets/Images/Logos/tailwind.png'
-import github from '../assets/Images/Logos/github.png'
+import github from '../assets/Images/Logos/ithub.png'
 import vscode from '../assets/Images/Logos/vscode.png'
 
 const techStackData = [
@@ -91,6 +91,7 @@ const Slider = () => {
     return (
       <div className="flex items-center justify-center py-8">
         <div className="flex space-x-8">
+          {/* Left Arrow */}
           <button
             className="text-white hover:text-[#906EF0]"
             onClick={handlePrev}
@@ -99,19 +100,22 @@ const Slider = () => {
           </button>
           {displayData.map((software, index) => (
             <div key={index} className="w-72 flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
+              {/* Images */}
               <img
                 src={software.image}
                 alt={software.name}
-                className="w-64 h-auto mx-16 mb-4"
+                className="w-32 h-auto mx-16 mb-4"
               />
+              {/* Card Info */}
               <div className="flex justify-between">
                 <p className="text-lg font-semibold">{software.name}</p>
-                <div className="rounded-full bg-transparent border-gray-400 text-[#808080] px-2 py-1">
+                <div className="rounded-full bg-transparent border-[#808080] text-[#808080] px-2 py-1">
                   {software.category}
                 </div>
               </div>
             </div>
           ))}
+          {/* Right Arrow */}
           <button
             className="text-white hover:text-[#906EF0]"
             onClick={handleNext}
