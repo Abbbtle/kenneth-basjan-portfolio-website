@@ -72,7 +72,7 @@ const About = () => {
           {/* Experience Heading */}
           <h3 className='text-4xl font-semibold text-white mt-10'>
             Experience
-            <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
+            <div className='mr-[945px] mt-[-20px]'><HorizontalRule/></div>
           </h3>
 
           {/* Work Experience 1 Details */}
@@ -126,11 +126,10 @@ const About = () => {
           {/* Tech Stack Heading */}
           <h3 className='text-4xl font-semibold text-white mt-10'>
             Tech Stack
-            <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
+            <div className='mr-[940px] mt-[-20px]'><HorizontalRule/></div>
           </h3>
           <TechStack/>
         </div>
-
       </div>
     </div>
   );
