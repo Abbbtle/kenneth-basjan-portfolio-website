@@ -110,14 +110,14 @@ const Slider = () => {
   
     const displayData = [];
     let counter = 0;
-    while (displayData.length < 3) {
+    while (displayData.length < 2) {
       displayData.push(techStackData[(currentIndex + counter) % techStackData.length]);
       counter++;
     }
   
     return (
       <div className="flex items-center justify-center py-8">
-        <div className="flex space-x-6">
+        <div className="flex space-x-28">
           {/* Left Arrow */}
           <button
             className="text-white hover:text-[#906EF0]"
@@ -126,7 +126,7 @@ const Slider = () => {
             &lt;
           </button>
           {displayData.map((software, index) => (
-            <div key={index} className="w-72 flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
+            <div key={index} className="w-96 h-96 flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
               {/* Images */}
               <img
                 src={software.image}
