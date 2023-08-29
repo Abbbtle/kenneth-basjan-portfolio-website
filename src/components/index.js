@@ -1,7 +1,6 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
-import Slider from "./Slider";
 import Services from "./Services";
 import Work from "./Work";
 import Info from "./Info";
@@ -17,7 +16,6 @@ export {
     Navbar,
     Hero,
     About,
-    Slider,
     Services,
     Work,
     Info,
