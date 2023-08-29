@@ -126,7 +126,7 @@ const TechStack = () => {
                 className="w-28 h-auto mx-auto mb-12 mt-10 rounded-3xl"
               />
               {/* Card Info */}
-              <div className="flex justify-around items-center">
+              <div className="flex justify-between items-center pl-3 pr-3">
                 <p className="text-sm font-semibold">{software.name}</p>
                 <div className="w-30 h-auto rounded-full text-center bg-transparent border-[#808080] border-[1px] text-sm text-[#808080] px-2 py-1">
                   {software.category}
