@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-// import { git, github, wordpress, vite, vscode, css3, html5, javascript, figma, tailwind} from '../assets';
 import react from '../assets/Images/Logos/react.svg'
 import vite from '../assets/Images/Logos/vite.svg'
 import figma from '../assets/Images/Logos/figma.png'
 import wordpress from '../assets/Images/Logos/wordpress.png'
-import html5 from '../assets/Images/Logos/html5.svg'
 import git from '../assets/Images/Logos/git.png'
-import css3 from '../assets/Images/Logos/css3.svg'
 import javascript from '../assets/Images/Logos/javascript.png'
 import tailwind from '../assets/Images/Logos/tailwind.png'
-import github from '../assets/Images/Logos/ithub.png'
+import github from '../assets/Images/Logos/github.png'
 import vscode from '../assets/Images/Logos/vscode.png'
+import sanity from '../assets/Images/Logos/sanity.png'
+import framer from '../assets/Images/Logos/framer.png'
+import discord from '../assets/Images/Logos/discord.png'
+import chatgpt from '../assets/Images/Logos/chatgpt.png'
+import notion from '../assets/Images/Logos/notion.png'
 
 const techStackData = [
   {
-    name: "Tailwind CSS",
+    name: "TailwindCSS",
     category: "Styling",
     image: tailwind,
   },
@@ -39,24 +41,49 @@ const techStackData = [
     image: wordpress,
   },
   {
+    name: "Sanity",
+    category: "Headless CMS",
+    image: sanity,
+  },
+  {
     name: "Figma",
     category: "UI/UX",
     image: figma,
   },
-  {
-    name: "HTML",
-    category: "Hypertext Markup Language",
-    image: html5,
-  },
-  {
-    name: "CSS",
-    category: "Cascading Style Sheets.",
-    image: css3,
-  },
+//   {
+//     name: "HTML",
+//     category: "Markup Language",
+//     image: html5,
+//   },
+//   {
+//     name: "CSS",
+//     category: "Cascading Style Sheets.",
+//     image: css3,
+//   },
   {
     name: "Javascript",
-    category: "Programming Language",
-    image: {javascript},
+    category: "Language",
+    image: javascript,
+  },
+  {
+    name: "Discord",
+    category: "Communication",
+    image: discord,
+  },
+  {
+    name: "Notion",
+    category: "Notes",
+    image: notion,
+  },
+  {
+    name: "ChatGPT",
+    category: "Productivity",
+    image: chatgpt,
+  },
+  {
+    name: "Framer Motion",
+    category: "Animation",
+    image: framer,
   },
   {
     name: "Vite",
@@ -90,7 +117,7 @@ const Slider = () => {
   
     return (
       <div className="flex items-center justify-center py-8">
-        <div className="flex space-x-8">
+        <div className="flex space-x-6">
           {/* Left Arrow */}
           <button
             className="text-white hover:text-[#906EF0]"
@@ -104,12 +131,12 @@ const Slider = () => {
               <img
                 src={software.image}
                 alt={software.name}
-                className="w-32 h-auto mx-16 mb-4"
+                className="w-28 h-auto mx-auto mb-12 mt-10 rounded-3xl"
               />
               {/* Card Info */}
-              <div className="flex justify-between">
-                <p className="text-lg font-semibold">{software.name}</p>
-                <div className="rounded-full bg-transparent border-[#808080] text-[#808080] px-2 py-1">
+              <div className="flex justify-around items-center">
+                <p className="text-sm font-semibold">{software.name}</p>
+                <div className="w-30 h-auto rounded-full text-center bg-transparent border-[#808080] border-[1px] text-sm text-[#808080] px-2 py-1">
                   {software.category}
                 </div>
               </div>
