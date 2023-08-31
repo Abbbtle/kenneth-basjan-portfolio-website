@@ -13,6 +13,7 @@ import framer from '../assets/Images/Logos/framer.png'
 import discord from '../assets/Images/Logos/discord.png'
 import chatgpt from '../assets/Images/Logos/chatgpt.png'
 import notion from '../assets/Images/Logos/notion.png'
+import python from '../assets/Images/Logos/python.svg'
 
 const techStackData = [
   {
@@ -84,6 +85,11 @@ const techStackData = [
     name: "VS Code",
     category: "Code Editor",
     image: vscode,
+  },
+  {
+    name: "Python",
+    category: "Language",
+    image: python,
   }
 ];
 

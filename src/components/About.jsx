@@ -16,7 +16,7 @@ const About = () => {
 
         <div className='md:flex mt-10 items-center'>
 
-          <img src={kenneth1} alt="Kenneth Basjan" className='w-80 h-auto object-contain rounded-3xl'/>
+          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='w-80 h-auto object-contain rounded-3xl'/>
 
           <p className='text-black font-medium md:ml-11 text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
