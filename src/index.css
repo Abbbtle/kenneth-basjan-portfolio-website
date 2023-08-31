@@ -133,8 +133,8 @@ button:focus-visible {
 
 /*========== Cursor ===========*/
 .custom-cursor {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border: 2px solid #fff;
   border-radius: 50%;
   position: absolute;
@@ -143,6 +143,10 @@ button:focus-visible {
   z-index: 9999;
   mix-blend-mode: difference;
   transition: width 0.2s, height 0.2s;
+}
+
+* {
+  cursor: none;
 }
 
 /* ========== Scroll ========== */
