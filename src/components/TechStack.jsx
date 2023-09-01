@@ -13,6 +13,7 @@ import framer from '../assets/Images/Logos/framer.png'
 import discord from '../assets/Images/Logos/discord.png'
 import chatgpt from '../assets/Images/Logos/chatgpt.png'
 import notion from '../assets/Images/Logos/notion.png'
+import java from '../assets/Images/Logos/java.png'
 import python from '../assets/Images/Logos/python.svg'
 
 const techStackData = [
@@ -87,6 +88,11 @@ const techStackData = [
     image: vscode,
   },
   {
+    name: "Java",
+    category: "Language",
+    image: java,
+  },
+  {
     name: "Python",
     category: "Language",
     image: python,
@@ -122,13 +128,15 @@ const TechStack = () => {
             &lt;
           </button>
           {displayData.map((software, index) => (
-            <div 
+            <div  
               key={index}  
               className="w-80 flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
               {/* Images */}
               <img
                 src={software.image}
                 alt={software.name}
+                width={500}
+                height={500}
                 className="w-28 h-auto mx-auto mb-12 mt-10 rounded-3xl"
               />
               {/* Card Info */}
