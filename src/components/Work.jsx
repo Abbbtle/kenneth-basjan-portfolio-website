@@ -55,7 +55,7 @@ const Work = () => {
                   />
               </div>
               <h2 className="text-[30px] font-bold text-white sm:text-4xl">
-              JAM Consulting –– Business Consulting, Management, & Startup Coaching
+                JAM Consulting –– Business Consulting, Management, & Startup Coaching
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-100">
                 At JAM Consulting, I took charge of creating their dynamic website, crafting a seamless digital 
@@ -97,24 +97,24 @@ const Work = () => {
               </defs>
             </svg>
             <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
-              <div className='bg-[#795a5a] mb-5 rounded-[10px] w-14 h-14 items-center flex justify-center shadow-inner shadow-[#d1afaf]'>
+              <div className='bg-[#40584b] mb-5 rounded-[10px] w-14 h-14 items-center flex justify-center shadow-inner shadow-[#96bea9]'>
                   <img 
-                    src= {jam_favicon} 
+                    src= {tbm_favicon} 
                     alt="JAM Favicon" 
                     width={50}
                     height={50}
                   />
               </div>
               <h2 className="text-[30px] font-bold text-white sm:text-4xl">
-              JAM Consulting –– Business Consulting, Management, & Startup Coaching
+                The Billiard Man –– Pool Table Service Providers Near New York, NY
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-100">
-                At JAM Consulting, I took charge of creating their dynamic website, crafting a seamless digital 
-                presence to complement their business consulting, management, and startup coaching services.
+                As the dedicated web developer for The Billiard Man, I designed and developed a captivating online 
+                platform that showcases their expertise as premier pool table service providers near New York, NY.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                 
-                <a href="https://meetjanicepatterson.com" className="text-lg font-normal leading-6 text-white" target="_blank" rel="noopener noreferrer">
+                <a href="https://thebilliardman.com" className="text-lg font-normal leading-6 text-white" target="_blank" rel="noopener noreferrer">
                   Go To Website <span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -122,8 +122,8 @@ const Work = () => {
             <div className="relative mt-16 h-80 lg:mt-8">
               <img
                 className="absolute left-0 top-0 w-[60rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-                src= {jam}
-                alt="JAM Consulting Home Screen"
+                src= {billiard}
+                alt="The Billiard Man Home Screen"
                 width={1824}
                 height={1080}
               />
