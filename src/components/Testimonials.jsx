@@ -43,7 +43,15 @@ const Testimonials = () => {
           Say about my work
           <div className='mr-[300px] ml-[300px] mt-[-40px]'><HorizontalRule/></div>
         </h2>
+        <p className='text-[20px] font-semibold text-center mr-24 ml-24'>
+          Nothing makes me happier than <span className="text-[#906EF0]">witnessing my clients' success and satisfaction</span>. Here are some kind 
+          words from those <span className="text-[#906EF0]">I've had the privilege to collaborate with</span>. Their words reaffirm 
+          my <span className="text-[#906EF0]">commitment to excellence</span> and fuel my drive to 
+          continually <span className="text-[#906EF0]">exceed expectations</span>. Let's create a success 
+          story <span className="text-[#906EF0]">together</span>!
+        </p>
 
+        {/* Slider */}
         <div className="flex items-center justify-center py-8 mb-40">
           <div className="flex space-x-8">
             {/* Left Arrow */}
@@ -53,16 +61,18 @@ const Testimonials = () => {
             >
               &lt;
             </button>
-            {displayData.map((software, index) => (
-              <div key={index} className="w-[40vw] h-auto flex flex-col justify-end bg-transparent shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
+            {displayData.map((client, index) => (
+              <div 
+                key={index} 
+                className="w-[40vw] h-auto flex flex-col justify-end bg-transparent shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
                 {/* Card Info */}
-                <div className="flex flex-col justify-around items-center">
+                <div className="flex flex-col justify-around">
                 <div className="w-30 h-auto rounded-full bg-transparent text-[22px] text-[#d8d8d8] px-2 py-1 font-semibold">
                     <p className="text-[40px] mt-5">"</p>
-                    {software.description}
+                    {client.description}
                     <p className="text-[40px] mt-10">"</p>
                   </div>
-                  <p className="text-[16px] font-semibold text-[#A3A3A3]">{software.name}</p>
+                  <p className="text-[16px] font-semibold text-[#A3A3A3] ml-2">{client.name}</p>
                 </div>
               </div>
             ))}
@@ -75,7 +85,6 @@ const Testimonials = () => {
             </button>
           </div>
         </div>
-
       </div>
     );
   };

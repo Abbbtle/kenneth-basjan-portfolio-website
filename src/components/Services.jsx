@@ -79,19 +79,19 @@ const Services = () => {
           >
             &lt;
           </button>
-          {displayData.map((software, index) => (
+          {displayData.map((service, index) => (
             <div key={index} className="w-[35vw] h-auto flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
               {/* Card Info */}
               <div className="flex flex-col justify-around items-center mt-5">
-                <p className="text-2xl font-semibold text-white">{software.name}</p>
+                <p className="text-2xl font-semibold text-white">{service.name}</p>
                 <div className="w-30 h-auto rounded-full text-center bg-transparent text-sm text-[#d8d8d8] px-2 py-1">
-                  {software.description}
+                  {service.description}
                 </div>
               </div>
               {/* Images */}
               <img
-                src={software.image}
-                alt={software.name}
+                src={service.image}
+                alt={service.name}
                 className="w-auto h-48 mx-auto mb-8 mt-10 rounded-3xl"
               />
             </div>
