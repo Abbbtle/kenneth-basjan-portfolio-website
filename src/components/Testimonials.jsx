@@ -3,7 +3,7 @@ import HorizontalRule from "./HorizontalRule";
 
 const techStackData = [
   {
-    name: "Bonolo Basjan (President of BYS Durban)",
+    name: "Bonolo Pitswane (President of BYS Durban)",
     description: "Kenneth's creativity and technical expertise made our project a resounding success. His communication throughout the process was exemplary, and he was always receptive to feedback. Working with Kenneth was an absolute pleasure.",
   },
   {

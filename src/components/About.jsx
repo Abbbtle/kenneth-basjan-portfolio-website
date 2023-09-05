@@ -6,7 +6,9 @@ import {FaUserTie} from "react-icons/fa";
 import TechStack from './TechStack';
 import Button2 from './Button2';
 import Popup from "./Popup";
-import '../index.css'
+import Weberu from './Weberu';
+import '../index.css';
+import soon from '../assets/Images/coming-soon.gif';
 
 const About = () => {
   return (
@@ -57,7 +59,7 @@ const About = () => {
                       - Object-oriented programming concepts (e.g. inheritance, polymorphism).<br/>
                       - Software design principles and patterns.<br/>
                       - Mobile app development (Android Studio).<br/>
-                      - Software project management (e.g. project planning, estimation, risk management).<br/>
+                      - Software project management (e.g. project planning, estimation, risk management).
                   </Popup>
                 </div>
                 <div className='md:ml-2'><Button2><a href="https://www.cut.ac.za/campus/1/bloemfontein" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
@@ -83,7 +85,7 @@ const About = () => {
                     - Branding and marketing for videographers.<br/>
                     - Legal and ethical considerations in videography (e.g. contracts, copyrights, model releases).<br/>
                     - Technical skills and techniques for video production (e.g. camera settings, lighting setups, editing software).<br/>
-                    - Networking and collaboration in the videography industry.<br/>
+                    - Networking and collaboration in the videography industry.
                   </Popup>
                 </div>
                 <div className='md:ml-2'><Button2><a href="https://www.ormsdirect.co.za/pages/ctsp" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
@@ -107,8 +109,25 @@ const About = () => {
               <p className='text-white text-[16px]'>Weberu</p>
               <p className='text-[#906EF0]'>Nov 2021 - Present</p>
               <div className='flex mt-2'>
-                <div className='md:mr-2'><Popup>Description</Popup></div>
-                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+                <div className='md:mr-2'>
+                  <Popup>
+                    Responsibilities:<br/><br/>
+                    - Developing and maintaining web applications using WordPress, Elementor and other related technologies.<br/>
+                    - Managing and executing social media campaigns across multiple platforms. They create content, monitor analytics, and engage with the audience.<br/>
+                    - Creating engaging and high-quality content for social media platforms. This can include graphics, videos, blog posts, and other forms of content.<br/>
+                    - Creating visually appealing graphics and designs for social media posts, ads, and other marketing materials.<br/>
+                    - Managing client relationships, ensuring client satisfaction, and maintaining regular communication.<br/>
+                    - Developing and implementing digital marketing strategies that align with the client's goals and objectives.<br/>
+                    - Creating compelling and effective copy for social media posts, ads, and other marketing materials.<br/>
+                    - Monitoring and analyzing social media data to track performance, identify trends, and make data-driven decisions.<br/>
+                    - Generating new business leads, developing proposals, and closing deals.
+                  </Popup>
+                </div>
+                <div className='md:mr-2'>
+                  <Weberu>
+                    <img src= {soon} alt="Weberu-Coming-Soon" className='rounded-3xl' />
+                  </Weberu>
+                </div>
               </div>
             </div>
           </div>
@@ -123,8 +142,19 @@ const About = () => {
               <p className='text-white text-[16px]'>UVU Africa - Capaciti Division</p>
               <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
               <div className='flex mt-2'>
-                <div className='md:mr-2'><Popup>Description</Popup></div>
-                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              <div className='md:mr-2'>
+                  <Popup>
+                    Responsibilities:<br/><br/>
+                    - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, Python, MERN and other related technologies.<br/>
+                    - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
+                    - Implementing responsive design and ensuring cross-browser compatibility.<br/>
+                    - Participating in code reviews and providing constructive feedback to other developers.<br/>
+                    - Supporting the design and development of software programs under the guidance of senior developers.<br/>
+                    - Work closely with other members of the development team to ensure that project tasks are being completed on time and within scope.<br/>
+                    - Responsible for documenting my work and processes to ensure that other team members can understand and work on the code you write.<br/>
+                  </Popup>
+                </div>
+                <div className='md:ml-2'><Button2><a href="https://uvuafrica.com/capaciti/" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
               </div>
             </div>
           </div>
@@ -139,8 +169,20 @@ const About = () => {
               <p className='text-white text-[16px]'>Younglings Africa</p>
               <p className='text-[#906EF0]'>July 2023 - Present</p>
               <div className='flex mt-2'>
-                <div className='md:mr-2'><Popup>Description</Popup></div>
-                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+              <div className='md:mr-2'>
+                  <Popup>
+                    Responsibilities:<br/><br/>
+                    - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, MERN and other related technologies.<br/>
+                    - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
+                    - Implementing responsive design and ensuring cross-browser compatibility.<br/>
+                    - Paticipate in Hackathon with other developers, and also joining staff team to facilitate ABSA Hackathons.<br/>
+                    - Participating in code reviews and providing constructive feedback to other developers.<br/>
+                    - Supporting the design and development of software programs under the guidance of senior developers.<br/>
+                    - Work closely with other members of the development team to ensure that project tasks are being completed on time and within scope.<br/>
+                    - Responsible for documenting my work and processes to ensure that other team members can understand and work on the code you write.<br/>
+                  </Popup>
+                </div>
+                <div className='md:ml-2'><Button2><a href="https://www.younglings.academy" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
               </div>
             </div>
           </div>
