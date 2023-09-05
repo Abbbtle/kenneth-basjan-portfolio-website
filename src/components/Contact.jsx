@@ -115,7 +115,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter your email address"
           />
-          {errors.name && <p className="text-red-500 text-xs">{errors.email}</p>}
+          {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -131,7 +131,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Enter subject"
           />
-          {errors.name && <p className="text-red-500 text-xs">{errors.subject}</p>}
+          {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
           </div>
           <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
@@ -147,7 +147,7 @@ const Contact = () => {
             placeholder="Write your message here"
             rows="10"
           />
-          {errors.name && <p className="text-red-500 text-xs">{errors.message}</p>}
+          {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
           </div>
 
           {/* submit Button */}
