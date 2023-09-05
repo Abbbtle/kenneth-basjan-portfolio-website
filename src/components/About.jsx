@@ -6,6 +6,7 @@ import {FaUserTie} from "react-icons/fa";
 import TechStack from './TechStack';
 import Button2 from './Button2';
 import Popup from "./Popup";
+import '../index.css'
 
 const About = () => {
   return (
@@ -48,8 +49,18 @@ const About = () => {
               <p className='text-white text-[16px]'>Central University of Technology: Bloemfontein</p>
               <p className='text-[#906EF0]'>Jan 2016 - Nov 2019</p>
               <div className='flex mt-2'>
-                <div className='md:mr-2'><Popup>Description</Popup></div>
-                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+                <div className='md:mr-2'>
+                  <Popup>
+                      What I learnt:<br/><br/>
+                      - Programming languages (e.g. Java, C#, JavaScript).<br/>
+                      - Algorithms and data structures.<br/>
+                      - Object-oriented programming concepts (e.g. inheritance, polymorphism).<br/>
+                      - Software design principles and patterns.<br/>
+                      - Mobile app development (Android Studio).<br/>
+                      - Software project management (e.g. project planning, estimation, risk management).<br/>
+                  </Popup>
+                </div>
+                <div className='md:ml-2'><Button2><a href="https://www.cut.ac.za/campus/1/bloemfontein" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
               </div>
             </div>
           </div>
@@ -64,8 +75,18 @@ const About = () => {
               <p className='text-white text-[16px]'>ORMS Cape Town School of Photography</p>
               <p className='text-[#906EF0]'>Aug 2021</p>
               <div className='flex mt-2'>
-                <div className='md:mr-2'><Popup>Description</Popup></div>
-                <div className='md:ml-2'><Button2>Go To Website</Button2></div>
+                <div className='md:mr-2'>
+                  <Popup>
+                  What I learnt:<br/><br/>
+                    - Understanding the video production process (e.g. pre-production, production, post-production).<br/>
+                    - Business planning and budgeting for video projects.<br/>
+                    - Branding and marketing for videographers.<br/>
+                    - Legal and ethical considerations in videography (e.g. contracts, copyrights, model releases).<br/>
+                    - Technical skills and techniques for video production (e.g. camera settings, lighting setups, editing software).<br/>
+                    - Networking and collaboration in the videography industry.<br/>
+                  </Popup>
+                </div>
+                <div className='md:ml-2'><Button2><a href="https://www.ormsdirect.co.za/pages/ctsp" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
               </div>
             </div>
           </div>

@@ -127,8 +127,11 @@ button:focus-visible {
 
 .button2:hover {
   background-color: #906EF0;
-  
   transition: 350ms ease-in-out;
+}
+
+.button2 a:hover {
+  color: #ffffff;
 }
 
 .popup {
