@@ -175,7 +175,7 @@ const About = () => {
                     - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, MERN and other related technologies.<br/>
                     - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
                     - Implementing responsive design and ensuring cross-browser compatibility.<br/>
-                    - Paticipate in Hackathon with other developers, and also joining staff team to facilitate ABSA Hackathons.<br/>
+                    - Paticipate in Hackathons with other developers, and also joining staff team to facilitate ABSA Hackathons.<br/>
                     - Participating in code reviews and providing constructive feedback to other developers.<br/>
                     - Supporting the design and development of software programs under the guidance of senior developers.<br/>
                     - Work closely with other members of the development team to ensure that project tasks are being completed on time and within scope.<br/>

@@ -10,6 +10,7 @@ import ScrollingText from "./ScrollingText";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import CustomCursor from "./CustomCursor";
+import ScrollToTopButton from "./ScrollToTopButton";
 import "../index.css"
 
 export {
@@ -24,5 +25,6 @@ export {
     ScrollingText,
     Contact,
     Footer,
-    CustomCursor
+    CustomCursor,
+    ScrollToTopButton
 }
