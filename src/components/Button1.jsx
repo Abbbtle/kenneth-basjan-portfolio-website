@@ -1,5 +1,5 @@
 import React from 'react';
-import '../index.css'; // or import './Button.module.css';
+import '../index.css';
 
 const Button1 = ({ children }) => {
   return (

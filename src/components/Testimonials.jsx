@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HorizontalRule from "./HorizontalRule";
-
+import Popup from "./Popup";
+import Button1 from './Button1';
 
 const techStackData = [
   {
@@ -86,8 +87,7 @@ const Testimonials = () => {
             </button>
           </div>
         </div>
-
-
+        <Popup>Hello</Popup>
       </div>
     );
   };
