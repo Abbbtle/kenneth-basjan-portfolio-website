@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-5 right-5 bg-gray-500 hover:bg-gray-700 text-white text-2xl px-2 py-2 rounded-full"
+          className="fixed bottom-5 right-5 bg-gray-500 hover:bg-gray-700 hover:text-[#906EF0] text-white text-2xl px-2 py-2 rounded-full"
         >
           <BsArrowUpCircle /> {/* Render the icon component here */}
         </button>
