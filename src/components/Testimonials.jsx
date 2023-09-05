@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HorizontalRule from "./HorizontalRule";
 
+
 const techStackData = [
   {
     name: "Bonolo Basjan (President of BYS Durban)",
@@ -85,6 +86,8 @@ const Testimonials = () => {
             </button>
           </div>
         </div>
+
+
       </div>
     );
   };
