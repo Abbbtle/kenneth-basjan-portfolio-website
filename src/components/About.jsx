@@ -1,28 +1,28 @@
-import React from 'react'
+import React from 'react';
 import { kenneth1 } from '../assets';
 import HorizontalRule from './HorizontalRule';
-import {LuGraduationCap} from "react-icons/lu";
-import {FaUserTie} from "react-icons/fa";
+import { LuGraduationCap } from 'react-icons/lu';
+import { FaUserTie } from 'react-icons/fa';
 import TechStack from './TechStack';
 import Button2 from './Button2';
-import Popup from "./Popup";
+import Popup from './Popup';
 import Weberu from './Weberu';
 import '../index.css';
 import soon from '../assets/Images/coming-soon.gif';
 
 const About = () => {
   return (
-    <div name='about' className='bg-white mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
-      <div className='mx-10 mt-10'>
+    <div name='about' className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
+      <div className='mx-5 md:mx-10 mt-10'>
 
-        <h2 className='text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
-        <h4 className='text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
+        <h2 className='text-3xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
+        <h4 className='text-xl md:text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
 
-        <div className='md:flex mt-10 items-center'>
+        <div className='md:flex mt-5 md:mt-10 items-center'>
 
-          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='w-80 h-auto object-contain rounded-3xl'/>
+          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='w-60 md:w-80 h-auto object-contain rounded-3xl' />
 
-          <p className='text-black font-medium md:ml-11 text-[20px]'>
+          <p className='text-black font-medium md:ml-5 md:ml-11 text-lg md:text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
             With <span className='text-[#4E30A5]'>experience</span> as a <span className='text-[#4E30A5]'>MERN Stack web developer</span>, I have honed my skills to create websites that 
             marry <span className='text-[#4E30A5]'>stunning design</span> with <span className='text-[#4E30A5]'>robust functionality</span>. From concept to execution, I thrive on transforming 
@@ -33,22 +33,22 @@ const About = () => {
         </div>
 
          
-        <div className='bg-[#1E1E1E] mt-10 rounded-3xl p-10'>
+        <div className='bg-[#1E1E1E] mt-5 md:mt-10 rounded-3xl p-5 md:p-10'>
 
           {/* Education Heading */}
-          <h3 className='text-4xl font-semibold text-white'>
+          <h3 className='text-2xl md:text-4xl font-semibold text-white'>
             Education
-            <div className='mr-[960px] mt-[-20px]'><HorizontalRule/></div>
+            <div className='mr-[320px] md:mr-[960px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
           </h3>
 
           {/* Institution 1 Details */}
           <div className='flex items-center'>
-            <div className='mr-5 text-[25px] text-white'>
-            <LuGraduationCap/>
+            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+              <LuGraduationCap />
             </div>
             <div>
-              <p className='text-[18px] font-semibold text-white'>National Diploma in Information Technology</p>
-              <p className='text-white text-[16px]'>Central University of Technology: Bloemfontein</p>
+              <p className='text-lg md:text-[18px] font-semibold text-white'>National Diploma in Information Technology</p>
+              <p className='text-white text-md md:text-[16px]'>Central University of Technology: Bloemfontein</p>
               <p className='text-[#906EF0]'>Jan 2016 - Nov 2019</p>
               <div className='flex mt-2'>
                 <div className='md:mr-2'>
@@ -68,13 +68,13 @@ const About = () => {
           </div>
 
           {/* Institution 2 Details */}
-          <div className='flex mt-10 items-center'>
-            <div className='mr-5 text-[25px] text-white'>
-            <LuGraduationCap/>
+          <div className='flex mt-5 md:mt-10 items-center'>
+            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+              <LuGraduationCap />
             </div>
             <div>
-              <p className='text-[18px] font-semibold text-white'>Creative Business 101 for Videographers</p>
-              <p className='text-white text-[16px]'>ORMS Cape Town School of Photography</p>
+              <p className='text-lg md:text-[18px] font-semibold text-white'>Creative Business 101 for Videographers</p>
+              <p className='text-white text-md md:text-[16px]'>ORMS Cape Town School of Photography</p>
               <p className='text-[#906EF0]'>Aug 2021</p>
               <div className='flex mt-2'>
                 <div className='md:mr-2'>
@@ -94,19 +94,19 @@ const About = () => {
           </div>
 
           {/* Experience Heading */}
-          <h3 className='text-4xl font-semibold text-white mt-10'>
+          <h3 className='text-2xl md:text-4xl font-semibold text-white mt-5 md:mt-10'>
             Experience
-            <div className='mr-[945px] mt-[-20px]'><HorizontalRule/></div>
+            <div className='mr-[320px] md:mr-[945px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
           </h3>
 
           {/* Work Experience 1 Details */}
           <div className='flex items-center'>
-            <div className='mr-5 text-[25px] text-white'>
-            <FaUserTie/>
+            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+              <FaUserTie />
             </div>
             <div>
-              <p className='text-[18px] font-semibold text-white'>Founder</p>
-              <p className='text-white text-[16px]'>Weberu</p>
+              <p className='text-lg md:text-[18px] font-semibold text-white'>Founder</p>
+              <p className='text-white text-md md:text-[16px]'>Weberu</p>
               <p className='text-[#906EF0]'>Nov 2021 - Present</p>
               <div className='flex mt-2'>
                 <div className='md:mr-2'>
@@ -133,16 +133,16 @@ const About = () => {
           </div>
 
           {/* Work Experience 2 Details */}
-          <div className='flex mt-10 items-center'>
-            <div className='mr-5 text-[25px] text-white'>
-            <FaUserTie/>
+          <div className='flex mt-5 md:mt-10 items-center'>
+            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+              <FaUserTie />
             </div>
             <div>
-              <p className='text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
-              <p className='text-white text-[16px]'>UVU Africa - Capaciti Division</p>
+              <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
+              <p className='text-white text-md md:text-[16px]'>UVU Africa - Capaciti Division</p>
               <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
               <div className='flex mt-2'>
-              <div className='md:mr-2'>
+                <div className='md:mr-2'>
                   <Popup>
                     Responsibilities:<br/><br/>
                     - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, Python, MERN and other related technologies.<br/>
@@ -160,16 +160,16 @@ const About = () => {
           </div>
 
           {/* Work Experience 3 Details */}
-          <div className='flex mt-10 items-center'>
-            <div className='mr-5 text-[25px] text-white'>
-            <FaUserTie/>
+          <div className='flex mt-5 md:mt-10 items-center'>
+            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+              <FaUserTie />
             </div>
             <div>
-              <p className='text-[18px] font-semibold text-white'>Junior Software Developer</p>
-              <p className='text-white text-[16px]'>Younglings Africa</p>
+              <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer</p>
+              <p className='text-white text-md md:text-[16px]'>Younglings Africa</p>
               <p className='text-[#906EF0]'>July 2023 - Present</p>
               <div className='flex mt-2'>
-              <div className='md:mr-2'>
+                <div className='md:mr-2'>
                   <Popup>
                     Responsibilities:<br/><br/>
                     - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, MERN and other related technologies.<br/>
@@ -188,9 +188,9 @@ const About = () => {
           </div>
 
           {/* Tech Stack Heading */}
-          <h3 className='text-4xl font-semibold text-white mt-10'>
+          <h3 className='text-2xl md:text-4xl font-semibold text-white mt-5 md:mt-10'>
             Tech Stack
-            <div className='mr-[940px] mt-[-20px]'><HorizontalRule/></div>
+            <div className='mr-[315px] md:mr-[940px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
           </h3>
           <TechStack/>
         </div>
@@ -199,4 +199,4 @@ const About = () => {
   );
 };
 
-export default About
+export default About;
