@@ -13,16 +13,16 @@ import soon from '../assets/Images/coming-soon.gif';
 const About = () => {
   return (
     <div name='about' className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
-      <div className='mx-5 md:mx-10 mt-10'>
+      <div className='mx-2 md:mx-10 mt-10'>
 
-        <h2 className='text-3xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
-        <h4 className='text-xl md:text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
+        <h2 className='text-center md:text-left text-3xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
+        <h4 className='text-center md:text-left text-xl md:text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
 
         <div className='md:flex mt-5 md:mt-10 items-center'>
 
           <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className=' sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
 
-          <p className='text-black font-medium sm:text-center sm:text-[18px] md:text-left md:ml-11 text-lg md:text-[20px]'>
+          <p className='text-black font-medium sm:text-center sm:text-[18px] mx-2 md:text-left md:ml-11 text-lg md:text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
             With <span className='text-[#4E30A5]'>experience</span> as a <span className='text-[#4E30A5]'>MERN Stack web developer</span>, I have honed my skills to create websites that 
             marry <span className='text-[#4E30A5]'>stunning design</span> with <span className='text-[#4E30A5]'>robust functionality</span>. From concept to execution, I thrive on transforming 
@@ -33,24 +33,24 @@ const About = () => {
         </div>
 
          
-        <div className='bg-[#1E1E1E] mt-5 md:mt-10 rounded-3xl p-5 md:p-10'>
+        <div className='bg-[#1E1E1E] mt-5 md:mt-10 rounded-3xl p-4  md:p-10'>
 
           {/* Education Heading */}
-          <h3 className='text-2xl md:text-4xl font-semibold text-white'>
+          <h3 className='text-center md:text-left text-4xl md:text-4xl font-semibold text-white'>
             Education
             <div className='mr-[320px] md:mr-[960px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
           </h3>
 
           {/* Institution 1 Details */}
-          <div className='flex items-center'>
-            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+          <div className='flex md:items-center'>
+            <div className='text-center md:text-left  mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
               <LuGraduationCap />
             </div>
             <div>
-              <p className='text-lg md:text-[18px] font-semibold text-white'>National Diploma in Information Technology</p>
+              <p className='sm:mr-10 text-sm md:text-[18px] font-semibold text-white'>National Diploma in Information Technology:</p>
               <p className='text-white text-md md:text-[16px]'>Central University of Technology: Bloemfontein</p>
               <p className='text-[#906EF0]'>Jan 2016 - Nov 2019</p>
-              <div className='flex mt-2'>
+              <div className='md:flex mt-2 sm:space-y-2 sm:items-center'>
                 <div className='md:mr-2'>
                   <Popup>
                       What I learnt:<br/><br/>
