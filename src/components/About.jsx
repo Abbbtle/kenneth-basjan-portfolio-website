@@ -20,9 +20,9 @@ const About = () => {
 
         <div className='md:flex mt-5 md:mt-10 items-center'>
 
-          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='w-60 md:w-80 h-auto object-contain rounded-3xl' />
+          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className=' sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
 
-          <p className='text-black font-medium md:ml-5 md:ml-11 text-lg md:text-[20px]'>
+          <p className='text-black font-medium sm:text-center sm:text-[18px] md:text-left md:ml-11 text-lg md:text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
             With <span className='text-[#4E30A5]'>experience</span> as a <span className='text-[#4E30A5]'>MERN Stack web developer</span>, I have honed my skills to create websites that 
             marry <span className='text-[#4E30A5]'>stunning design</span> with <span className='text-[#4E30A5]'>robust functionality</span>. From concept to execution, I thrive on transforming 
