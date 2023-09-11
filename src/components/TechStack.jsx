@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import react from '../assets/Images/Logos/react.svg'
 import vite from '../assets/Images/Logos/vite.svg'
 import figma from '../assets/Images/Logos/figma.png'
@@ -100,22 +100,45 @@ const techStackData = [
 ];
 
 const TechStack = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    const handlePrev = () => {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + techStackData.length) % techStackData.length);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [numItemsToDisplay, setNumItemsToDisplay] = useState(3); // Default to 3 items
+
+  // Update numItemsToDisplay based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setNumItemsToDisplay(1); // Set to 1 item for small screens
+      } else {
+        setNumItemsToDisplay(3); // Set to 3 items for larger screens
+      }
     };
-  
-    const handleNext = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % techStackData.length);
+
+    // Initial setup
+    handleResize();
+
+    // Add a resize event listener to update on window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
+  }, []);
   
-    const displayData = [];
-    let counter = 0;
-    while (displayData.length < 3) {
-      displayData.push(techStackData[(currentIndex + counter) % techStackData.length]);
-      counter++;
-    }
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + techStackData.length) % techStackData.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % techStackData.length);
+  };
+
+  const displayData = [];
+  for (let counter = 0; counter < numItemsToDisplay; counter++) {
+    displayData.push(techStackData[(currentIndex + counter) % techStackData.length]);
+  }
+
+    
   
     return (
       <div className="flex items-center justify-center py-8">
