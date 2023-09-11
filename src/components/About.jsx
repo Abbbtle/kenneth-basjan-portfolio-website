@@ -20,7 +20,7 @@ const About = () => {
 
         <div className='md:flex mt-5 md:mt-10 items-center'>
 
-          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className=' sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
+          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='mx-auto sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
 
           <p className='text-black font-medium sm:text-center sm:text-[18px] mx-2 md:text-left md:ml-11 text-lg md:text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
@@ -42,15 +42,15 @@ const About = () => {
           </h3>
 
           {/* Institution 1 Details */}
-          <div className='flex md:items-center'>
-            <div className='text-center md:text-left  mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
+          <div className='flex'>
+            <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
               <LuGraduationCap />
             </div>
             <div>
-              <p className='sm:mr-10 text-sm md:text-[18px] font-semibold text-white'>National Diploma in Information Technology:</p>
+              <p className='text-lg md:text-[18px] font-semibold text-white'>National Diploma in Information Technology:</p>
               <p className='text-white text-md md:text-[16px]'>Central University of Technology: Bloemfontein</p>
               <p className='text-[#906EF0]'>Jan 2016 - Nov 2019</p>
-              <div className='md:flex mt-2 sm:space-y-2 sm:items-center'>
+              <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                 <div className='md:mr-2'>
                   <Popup>
                       What I learnt:<br/><br/>
@@ -68,15 +68,15 @@ const About = () => {
           </div>
 
           {/* Institution 2 Details */}
-          <div className='flex mt-5 md:mt-10 items-center'>
-            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+          <div className='flex mt-5 md:mt-10'>
+            <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
               <LuGraduationCap />
             </div>
             <div>
               <p className='text-lg md:text-[18px] font-semibold text-white'>Creative Business 101 for Videographers</p>
               <p className='text-white text-md md:text-[16px]'>ORMS Cape Town School of Photography</p>
               <p className='text-[#906EF0]'>Aug 2021</p>
-              <div className='flex mt-2'>
+              <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                 <div className='md:mr-2'>
                   <Popup>
                   What I learnt:<br/><br/>
@@ -94,21 +94,21 @@ const About = () => {
           </div>
 
           {/* Experience Heading */}
-          <h3 className='text-2xl md:text-4xl font-semibold text-white mt-5 md:mt-10'>
+          <h3 className='text-center md:text-left text-4xl md:text-4xl font-semibold text-white mt-5'>
             Experience
             <div className='mr-[320px] md:mr-[945px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
           </h3>
 
           {/* Work Experience 1 Details */}
-          <div className='flex items-center'>
-            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+          <div className='flex'>
+            <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
               <FaUserTie />
             </div>
             <div>
               <p className='text-lg md:text-[18px] font-semibold text-white'>Founder</p>
               <p className='text-white text-md md:text-[16px]'>Weberu</p>
               <p className='text-[#906EF0]'>Nov 2021 - Present</p>
-              <div className='flex mt-2'>
+              <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                 <div className='md:mr-2'>
                   <Popup>
                     Responsibilities:<br/><br/>
@@ -133,15 +133,15 @@ const About = () => {
           </div>
 
           {/* Work Experience 2 Details */}
-          <div className='flex mt-5 md:mt-10 items-center'>
-            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+          <div className='flex mt-5 md:mt-10'>
+            <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
               <FaUserTie />
             </div>
             <div>
               <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
               <p className='text-white text-md md:text-[16px]'>UVU Africa - Capaciti Division</p>
               <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
-              <div className='flex mt-2'>
+              <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                 <div className='md:mr-2'>
                   <Popup>
                     Responsibilities:<br/><br/>
@@ -160,15 +160,15 @@ const About = () => {
           </div>
 
           {/* Work Experience 3 Details */}
-          <div className='flex mt-5 md:mt-10 items-center'>
-            <div className='mr-2 md:mr-5 text-[20px] md:text-[25px] text-white'>
+          <div className='flex mt-5 md:mt-10'>
+            <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
               <FaUserTie />
             </div>
             <div>
               <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer</p>
               <p className='text-white text-md md:text-[16px]'>Younglings Africa</p>
               <p className='text-[#906EF0]'>July 2023 - Present</p>
-              <div className='flex mt-2'>
+              <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                 <div className='md:mr-2'>
                   <Popup>
                     Responsibilities:<br/><br/>
@@ -188,7 +188,7 @@ const About = () => {
           </div>
 
           {/* Tech Stack Heading */}
-          <h3 className='text-2xl md:text-4xl font-semibold text-white mt-5 md:mt-10'>
+          <h3 className='text-center md:text-left text-4xl md:text-4xl font-semibold text-white mt-5'>
             Tech Stack
             <div className='mr-[315px] md:mr-[940px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
           </h3>
