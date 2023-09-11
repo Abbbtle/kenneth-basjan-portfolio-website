@@ -21,7 +21,7 @@ const Popup = ( { children } ) =>{
               <div className="border-white border-[1px] rounded-lg shadow-lg relative flex flex-col w-full bg-[#0D0D0D] focus:outline-none">
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-white text-lg leading-relaxed">
+                  <p className="my-4 text-white text-sm md:text-lg leading-relaxed">
                   {children}
                   </p>
                 </div>

@@ -136,7 +136,7 @@ const TechStack = () => {
                 src={software.image}
                 alt={software.name}
                 width={500}
-                height={500}
+                height={50}
                 className="w-28 h-auto mx-auto mb-12 mt-10 rounded-3xl"
               />
               {/* Card Info */}
