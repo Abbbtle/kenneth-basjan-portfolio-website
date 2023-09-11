@@ -134,8 +134,8 @@ const TechStack = () => {
   }
 
     return (
-      <div className="flex items-center justify-center py-8">
-        <div className="flex space-x-6">
+      <div className="flex  items-center justify-center py-8">
+        <div className="flex space-x-2 md:space-x-6 items-center md:items-stretch">
           {/* Left Arrow */}
           <button
             className="text-white hover:text-[#906EF0]"
@@ -146,19 +146,17 @@ const TechStack = () => {
           {displayData.map((software, index) => (
             <div  
               key={index}  
-              className="w-80 flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
+              className="md:w-80 flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
               {/* Images */}
               <img
                 src={software.image}
                 alt={software.name}
-                width={500}
-                height={50}
-                className="w-28 h-auto mx-auto mb-12 mt-10 rounded-3xl"
+                className="w-28 h-auto mx-auto mb-12 mt-10 rounded-3xl "
               />
               {/* Card Info */}
               <div className="flex justify-between items-center pl-3 pr-3">
                 <p className="text-sm font-semibold">{software.name}</p>
-                <div className="w-30 h-auto rounded-full text-center bg-transparent border-[#808080] border-[1px] text-sm text-[#808080] px-2 py-1">
+                <div className="hidden md:block w-30 h-auto rounded-full text-center bg-transparent border-[#808080] border-[1px] text-sm text-[#808080] px-2 py-1">
                   {software.category}
                 </div>
               </div>
