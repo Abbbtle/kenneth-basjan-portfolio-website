@@ -50,7 +50,7 @@ const Services = () => {
       if (window.innerWidth < 1024) {
         setNumItemsToDisplay(1); // Set to 1 item for small screens
       } else {
-        setNumItemsToDisplay(3); // Set to 3 items for larger screens
+        setNumItemsToDisplay(2); // Set to 3 items for larger screens
       }
     };
 
