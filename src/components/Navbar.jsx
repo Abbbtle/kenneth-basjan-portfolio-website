@@ -16,14 +16,14 @@ const Navbar = () =>{
     <nav className='flex justify-between p-4 items-center font-medium'>
         <div>
           <div className="logo">
-          <img src={logo} alt='logo' className='w-16 md:w-40 h-auto object-contain' />
+          <img src={logo} alt='logo' className='w-20 md:w-40 h-auto object-contain' />
           </div>
         </div>
 
         <div className='mx-10'>
 
-          <div className='absolute right-6 top-7 text-xl'>
-            <CgMenuGridO onClick={showMenu}/>
+          <div className='absolute right-6 top-8 text-2xl md:hidden'>
+            <CgMenuGridO onClick={showMenu} className='cursor-pointer'/>
           </div>
 
           <ul className='hidden md:flex justify-around flex-row items-center text-white text-[18px] uppercase gap-8'>
