@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {logo} from '../assets';
 import Button1 from './Button1';
+import { Link } from 'react-router-dom';
+import {CgMenuGridO} from 'react-icons/cg';
+import NavbarMobile from './NavbarMobile';
 
-function Navbar() {
+const Navbar = () =>{
+  const [active, setActive] = useState(false)
+
+  const showMenu = () => {
+    setActive(!active)
+  }
+
   return (
     <nav className='flex justify-between p-4 items-center font-medium'>
         <div>
           <div className="logo">
-          <img src={logo} alt='logo' className='w-40 h-auto object-contain' />
+          <img src={logo} alt='logo' className='w-16 md:w-40 h-auto object-contain' />
           </div>
         </div>
 
         <div className='mx-10'>
-            <ul className='md:flex justify-around flex-row items-center text-white text-[18px] uppercase gap-8'>
-                <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'>About</li>
-                <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'>Services</li>
-                <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'>Work</li>
-                <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'>Testimonials</li>
-                <Button1>Contact</Button1>
-            </ul>
+
+          <div className='absolute right-6 top-7 text-xl'>
+            <CgMenuGridO onClick={showMenu}/>
+          </div>
+
+          <ul className='hidden md:flex justify-around flex-row items-center text-white text-[18px] uppercase gap-8'>
+              <li className='hover:text-[#906EF0] hover:animate-pulse'><Link to='/' className='cursor-pointer'>About</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse'><Link to='/' className='cursor-pointer'>Services</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse'><Link to='/' className='cursor-pointer'>Work</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse'><Link to='/' className='cursor-pointer'>Testimonials</Link></li>
+              <Button1><Link to='/' className='hover:text-white cursor-pointer'>Contact</Link></Button1>
+          </ul>
+
+          <NavbarMobile showMenu={showMenu} active={active}/>
+
         </div>
     </nav>
   );
