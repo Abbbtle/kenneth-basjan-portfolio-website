@@ -20,7 +20,7 @@ const About = () => {
 
         <div className='md:flex mt-5 md:mt-10 items-center'>
 
-          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='mx-auto sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
+          <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='mb-5 mx-auto sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
 
           <p className='text-black font-medium sm:text-center sm:text-[18px] mx-2 md:text-left md:ml-11 text-lg md:text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
