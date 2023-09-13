@@ -57,13 +57,13 @@ const Work = () => {
               <h2 className="text-2xl md:text-[30px] text-left font-bold text-white">
                 JAM Consulting –– Business Consulting, Management, & Startup Coaching
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-100">
+              <p className="mt-6 text-lg leading-8 text-gray-100 text-left">
                 At JAM Consulting, I took charge of creating their dynamic website, crafting a seamless digital 
                 presence to complement their business consulting, management, and startup coaching services.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                 
-                <a href="https://meetjanicepatterson.com" className="text-lg font-normal leading-6 text-white" target="_blank" rel="noopener noreferrer">
+                <a href="https://meetjanicepatterson.com" className="text-lg font-normal leading-6 text-white mb-14 md:mb-0" target="_blank" rel="noopener noreferrer">
                   Go To Website <span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -105,16 +105,16 @@ const Work = () => {
                     height={50}
                   />
               </div>
-              <h2 className="text-[30px] font-bold text-white sm:text-4xl">
+              <h2 className="text-[30px] font-bold text-white sm:text-4xl text-left">
                 The Billiard Man –– Pool Table Service Providers Near New York, NY
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-100">
+              <p className="mt-6 text-lg leading-8 text-gray-100 text-left">
                 As the dedicated web developer for The Billiard Man, I designed and developed a captivating online 
                 platform that showcases their expertise as premier pool table service providers near New York, NY.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                 
-                <a href="https://thebilliardman.com" className="text-lg font-normal leading-6 text-white" target="_blank" rel="noopener noreferrer">
+                <a href="https://thebilliardman.com" className="text-lg font-normal leading-6 text-white mb-14 md:mb-0" target="_blank" rel="noopener noreferrer">
                   Go To Website <span aria-hidden="true">→</span>
                 </a>
               </div>
