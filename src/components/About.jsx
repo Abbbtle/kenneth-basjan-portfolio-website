@@ -15,8 +15,8 @@ const About = () => {
     <div name='about' className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
       <div className='mx-2 md:mx-10 mt-10'>
 
-        <h2 className='text-center md:text-left text-3xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
-        <h4 className='text-center md:text-left text-xl md:text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
+        <h2 className='text-center md:text-left text-4xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
+        <h4 className='text-center md:text-left text-2xl md:text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
 
         <div className='md:flex mt-5 md:mt-10 items-center'>
 
@@ -36,9 +36,9 @@ const About = () => {
         <div className='bg-[#1E1E1E] mt-5 md:mt-10 rounded-3xl p-4  md:p-10'>
 
           {/* Education Heading */}
-          <h3 className='text-center md:text-left text-4xl md:text-4xl font-semibold text-white'>
+          <h3 className='mt-5 md:mt-0 text-center md:text-left text-5xl font-semibold text-white'>
             Education
-            <div className='mr-[320px] md:mr-[960px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
+            <div className='mx-7 md:mx-0 md:mr-[900px] mt-[-20px] md:mt-[-15px]'><HorizontalRule /></div>
           </h3>
 
           {/* Institution 1 Details */}
@@ -94,9 +94,9 @@ const About = () => {
           </div>
 
           {/* Experience Heading */}
-          <h3 className='text-center md:text-left text-4xl md:text-4xl font-semibold text-white mt-5'>
+          <h3 className='mt-5 text-center md:text-left text-5xl font-semibold text-white'>
             Experience
-            <div className='mr-[320px] md:mr-[945px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
+            <div className='mx-5 md:mx-0 md:mr-[880px] mt-[-20px] md:mt-[-15px]'><HorizontalRule /></div>
           </h3>
 
           {/* Work Experience 1 Details */}
@@ -188,9 +188,9 @@ const About = () => {
           </div>
 
           {/* Tech Stack Heading */}
-          <h3 className='text-center md:text-left text-4xl md:text-4xl font-semibold text-white mt-5'>
+          <h3 className='text-center md:text-left text-5xl font-semibold text-white mt-5'>
             Tech Stack
-            <div className='mr-[315px] md:mr-[940px] mt-[-10px] md:mt-[-20px]'><HorizontalRule /></div>
+            <div className='mx-4 md:mx-0 md:mr-[875px] mt-[-20px] md:mt-[-15px]'><HorizontalRule /></div>
           </h3>
           <TechStack/>
         </div>
