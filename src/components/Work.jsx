@@ -30,7 +30,7 @@ const Work = () => {
       {/* Past Work Cards */}
       <div>
         {/* Card 1 */}
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-2">
+        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-20 lg:px-2">
           <div className="border-[1px] border-[#808080] relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
             <svg
               viewBox="0 0 1024 1024"
@@ -54,7 +54,7 @@ const Work = () => {
                     height={50}
                   />
               </div>
-              <h2 className="text-[30px] font-bold text-white sm:text-4xl">
+              <h2 className="text-2xl md:text-[30px] text-left font-bold text-white">
                 JAM Consulting –– Business Consulting, Management, & Startup Coaching
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-100">
@@ -68,7 +68,7 @@ const Work = () => {
                 </a>
               </div>
             </div>
-            <div className="relative mt-16 h-80 lg:mt-8">
+            <div className="hidden md:block relative mt-16 h-80 lg:mt-8">
               <img
                 className="absolute left-0 top-0 w-[60rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
                 src= {jam}
@@ -81,7 +81,7 @@ const Work = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-2">
+        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-20 lg:px-2">
           <div className="border-[1px] border-[#808080] relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
             <svg
               viewBox="0 0 1024 1024"
@@ -119,7 +119,7 @@ const Work = () => {
                 </a>
               </div>
             </div>
-            <div className="relative mt-16 h-80 lg:mt-8">
+            <div className="hidden md:block relative mt-16 h-80 lg:mt-8">
               <img
                 className="absolute left-0 top-0 w-[60rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
                 src= {billiard}
@@ -132,11 +132,11 @@ const Work = () => {
         </div>
 
         {/* Card 3 */}
-        <div className='mx-auto max-w-6xl py-24 sm:px-6 sm:py-32 lg:px-8'>
+        <div className='mx-auto max-w-6xl py-24 sm:px-6 sm:py-20 lg:px-8'>
           <div className='bg-[#181818] shadow-lg shadow-black rounded-3xl border-dashed border-[1px] border-[#808080]'>
             <div className='flex flex-col items-center mt-28 mb-28 justify-center'>
               <LuStars className='text-[70px]'/>
-              <h3 className='uppercase font-bold text-[40px] mt-10'>Your project goes here</h3>
+              <h3 className='uppercase text-center font-bold text-[40px] mt-10'>Your project goes here</h3>
               <p className='text-[20px] font-light'>Let's turn your idea into reality</p>
               <div className='mt-20'>
                 <Button1>GET IN TOUCH</Button1>
