@@ -6,21 +6,21 @@ const Info = () => {
   return (
     <div>
       {/* Background Image */}
-      <div className='w-full h-auto mt-40'>
+      <div className='w-full h-auto mt-20 md:mt-40'>
         <img src= {presentation} alt="" />
       </div>
 
       {/* Big Text */}
       <div>
         {/* More Info Heading */} 
-      <h2 className='text-[72px] font-bold text-white uppercase text-center mt-40 mb-[-40px]'>
+      <h2 className='text-4xl md:text-[72px] font-bold text-white uppercase text-center mt-20 md:mt-40 md:mb-7'>
         Crafting tailored
       </h2>
-      <h2 className='text-[72px] font-bold text-[#906EF0] uppercase text-center'>
+      <h2 className='text-4xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
         Digital Solutions
-        <div className='mr-[320px] ml-[320px] mt-[-40px]'><HorizontalRule/></div>
+        <div className='mx-3 md:mx-[320px] mt-[-15px] md:mt-[10px]'><HorizontalRule/></div>
       </h2>
-      <p className='text-[48px] font-bold text-center mr-24 ml-24'>
+      <p className='text-2xl md:text-5xl font-bold text-center mx-5 md:mx-10 '>
         In the <span className='text-[#906EF0]'>ever-evolving digital landscape</span>, I offer a range of 
         <span className='text-[#906EF0]'> bespoke services</span> to meet your <span className='text-[#906EF0]'>specific needs</span>. 
         Whether you're an <span className='text-[#906EF0]'>ambitious startup</span> or an <span className='text-[#906EF0]'>established enterprise</span>, 
