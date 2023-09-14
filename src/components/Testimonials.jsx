@@ -70,7 +70,7 @@ const Testimonials = () => {
         </p>
 
         {/* Slider */}
-        <div className="flex items-center justify-center py-8 mb-40">
+        <div className="flex items-center justify-center py-8 mb-10 md:mb-40">
           <div className="flex space-x-2 md:space-x-6 items-center md:items-stretch">
             {/* Left Arrow */}
             <button
