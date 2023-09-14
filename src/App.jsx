@@ -12,7 +12,7 @@ const App = () => {
 	}, []);
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app mx-2">
         <Navbar/>
         <Hero/>
         <About/>
@@ -21,7 +21,9 @@ const App = () => {
         <Info/>
         <Flow/>
         <Testimonials/>
-        <ScrollingText/>
+        <div className="app mx-[-0.35rem]">
+          <ScrollingText/>
+        </div>
         <Contact/>
         <Footer/>
         <CustomCursor/>

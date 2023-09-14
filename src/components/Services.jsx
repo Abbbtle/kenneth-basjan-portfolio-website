@@ -42,25 +42,22 @@ const techStackData = [
 
 const Services = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [numItemsToDisplay, setNumItemsToDisplay] = useState(3); // Default to 3 items
+  const [numItemsToDisplay, setNumItemsToDisplay] = useState(2);
 
   // Update numItemsToDisplay based on screen width
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setNumItemsToDisplay(1); // Set to 1 item for small screens
+        setNumItemsToDisplay(1);
       } else {
-        setNumItemsToDisplay(2); // Set to 3 items for larger screens
+        setNumItemsToDisplay(2);
       }
     };
 
-    // Initial setup
     handleResize();
 
-    // Add a resize event listener to update on window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };

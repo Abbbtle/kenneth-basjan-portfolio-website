@@ -18,25 +18,22 @@ const techStackData = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [numItemsToDisplay, setNumItemsToDisplay] = useState(3); // Default to 3 items
+  const [numItemsToDisplay, setNumItemsToDisplay] = useState(2);
 
   // Update numItemsToDisplay based on screen width
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
-        setNumItemsToDisplay(1); // Set to 1 item for small screens
+        setNumItemsToDisplay(1);
       } else {
-        setNumItemsToDisplay(2); // Set to 3 items for larger screens
+        setNumItemsToDisplay(2);
       }
     };
 
-    // Initial setup
     handleResize();
 
-    // Add a resize event listener to update on window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -57,14 +54,14 @@ const Testimonials = () => {
   
     return (
       <div>
-        <h2 className='text-[72px] font-bold text-white uppercase text-center mt-40 mb-[-40px]'>
+        <h2 className='text-4xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[-40px]'>
           Hear what clients
         </h2>
-        <h2 className='text-[72px] font-bold text-[#906EF0] uppercase text-center'>
+        <h2 className='text-4xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
           Say about my work
-          <div className='mr-[300px] ml-[300px] mt-[-40px]'><HorizontalRule/></div>
+          <div className='mx-1 mt-[-15px] md:mt-[-40px]'><HorizontalRule/></div>
         </h2>
-        <p className='text-[20px] font-semibold text-center mr-24 ml-24'>
+        <p className='text-lg md:text-[20px] font-semibold text-center mx-5'>
           Nothing makes me happier than <span className="text-[#906EF0]">witnessing my clients' success and satisfaction</span>. Here are some kind 
           words from those <span className="text-[#906EF0]">I've had the privilege to collaborate with</span>. Their words reaffirm 
           my <span className="text-[#906EF0]">commitment to excellence</span> and fuel my drive to 
@@ -74,7 +71,7 @@ const Testimonials = () => {
 
         {/* Slider */}
         <div className="flex items-center justify-center py-8 mb-40">
-          <div className="flex space-x-8">
+          <div className="flex space-x-2 md:space-x-6 items-center md:items-stretch">
             {/* Left Arrow */}
             <button
               className="text-white hover:text-[#906EF0]"
@@ -85,10 +82,10 @@ const Testimonials = () => {
             {displayData.map((client, index) => (
               <div 
                 key={index} 
-                className="w-[40vw] h-auto flex flex-col justify-end bg-transparent shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
+                className="w-[60vw] md:w-[40vw] h-auto flex flex-col justify-end bg-transparent shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
                 {/* Card Info */}
                 <div className="flex flex-col justify-around">
-                <div className="w-30 h-auto rounded-full bg-transparent text-[22px] text-[#d8d8d8] px-2 py-1 font-semibold">
+                <div className="w-30 h-auto rounded-full bg-transparent text-md md:text-[22px] text-[#d8d8d8] px-2 py-1 font-semibold">
                     <p className="text-[40px] mt-5">"</p>
                     {client.description}
                     <p className="text-[40px] mt-10">"</p>
