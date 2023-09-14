@@ -14,11 +14,11 @@ const Work = () => {
       <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[10px]'>
         Exploring
       </h2>
-      <h2 className='text-4xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
+      <h2 className='text-5xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
         Past Creations
-        <div className='mx-10 md:mx-[385px] mt-[-22px] md:mt-[20px]'><HorizontalRule/></div>
+        <div className='mx-2 md:mx-[380px] mt-[-15px]'><HorizontalRule/></div>
       </h2>
-      <p className='font-medium text-center text-lg md:text-[20px] mx-12 md:mr-20 md:ml-20'>
+      <p className='font-medium text-center text-lg md:text-xl mx-12 md:mr-20 md:ml-20'>
         Take a glimpse into a few of my past projects, where <span className='text-[#906EF0]'>creativity meets functionality </span>  
         in a seamless dance. Each website represents a <span className='text-[#906EF0]'>unique challenge </span>
         that I <span className='text-[#906EF0]'>embraced with enthusiasm</span>, ensuring that every line of code and 

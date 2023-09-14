@@ -38,7 +38,7 @@ const About = () => {
           {/* Education Heading */}
           <h3 className='mt-5 md:mt-0 text-center md:text-left text-5xl font-semibold text-white'>
             Education
-            <div className='mx-7 md:mx-0 md:mr-[900px] mt-[-20px] md:mt-[-15px]'><HorizontalRule /></div>
+            <div className='mx-5 md:mx-0 md:mr-[880px] mt-[-15px]'><HorizontalRule /></div>
           </h3>
 
           {/* Institution 1 Details */}
@@ -94,9 +94,9 @@ const About = () => {
           </div>
 
           {/* Experience Heading */}
-          <h3 className='mt-5 text-center md:text-left text-5xl font-semibold text-white'>
+          <h3 className='mt-3 text-center md:text-left text-5xl font-semibold text-white'>
             Experience
-            <div className='mx-5 md:mx-0 md:mr-[880px] mt-[-20px] md:mt-[-15px]'><HorizontalRule /></div>
+            <div className='mx-3 md:mx-0 md:mr-[860px] mt-[-15px]'><HorizontalRule /></div>
           </h3>
 
           {/* Work Experience 1 Details */}
@@ -190,7 +190,7 @@ const About = () => {
           {/* Tech Stack Heading */}
           <h3 className='text-center md:text-left text-5xl font-semibold text-white mt-5'>
             Tech Stack
-            <div className='mx-4 md:mx-0 md:mr-[875px] mt-[-20px] md:mt-[-15px]'><HorizontalRule /></div>
+            <div className='mx-2 md:mx-0 md:mr-[855px] mt-[-15px]'><HorizontalRule /></div>
           </h3>
           <TechStack/>
         </div>

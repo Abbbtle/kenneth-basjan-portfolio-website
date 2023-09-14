@@ -76,9 +76,9 @@ const Contact = () => {
   return (
     <div>
       {/* Contact Heading */}
-      <h2 className='text-[72px] font-bold text-white mt-10 uppercase text-center'>
+      <h2 className='text-5xl md:text-[72px] font-bold text-white mt-10 uppercase text-center'>
           Let's start <span className='text-[#906EF0]'>building</span> your<span className='text-[#906EF0]'> vision</span>
-          <div className='mx-2 md:mx-14 mt-[-30px] md:mt-[-40px]'><HorizontalRule/></div>
+          <div className='mx-2 md:mx-14 mt-[-15px] md:mt-[-40px]'><HorizontalRule/></div>
       </h2>
 
       {/* Contact Form */}
@@ -88,7 +88,7 @@ const Contact = () => {
         <form className="rounded-3xl" onSubmit={handleSubmit}>
 
           {/* Name Field */}
-          <div className="ml-8 mt-10">
+          <div className="ml-9 mt-10">
             <label htmlFor="name">Name: </label>
             <input
             className="appearance-none rounded ml-0 md:ml-3 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -101,10 +101,10 @@ const Contact = () => {
           />
           {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
           </div>
-          <div className='mx-7 md:mr-[45px] md:ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
+          <div className='mx-7 md:mx-9 mt-[-15px]'><HorizontalRule2/></div>
 
           {/* Email Field */}
-          <div className="ml-8 mt-10">
+          <div className="ml-9 mt-10">
             <label htmlFor="name">Email: </label>
             <input
             className="appearance-none rounded md:ml-4 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -117,10 +117,10 @@ const Contact = () => {
           />
           {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
           </div>
-          <div className='mx-7 md:mr-[45px] md:ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
+          <div className='mx-7 md:mx-9 mt-[-15px]'><HorizontalRule2/></div>
 
           {/* Subject Field */}
-          <div className="ml-8 mt-10">
+          <div className="ml-9 mt-10">
             <label htmlFor="name">Subject: </label>
             <input
             className="appearance-none rounded bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -133,12 +133,12 @@ const Contact = () => {
           />
           {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
           </div>
-          <div className='mx-7 md:mr-[45px] md:ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
+          <div className='mx-7 md:mx-9 mt-[-15px]'><HorizontalRule2/></div>
 
           {/* Message Textarea */}
           <div className="ml-4 md:ml-8 mt-10">
             <textarea
-            className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] md:w-[97%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="message"
             id="message"
             name="message"

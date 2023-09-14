@@ -54,10 +54,10 @@ const Testimonials = () => {
   
     return (
       <div>
-        <h2 className='text-4xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[-40px]'>
+        <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[-40px]'>
           Hear what clients
         </h2>
-        <h2 className='text-4xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
+        <h2 className='text-5xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
           Say about my work
           <div className='mx-1 mt-[-15px] md:mt-[-40px]'><HorizontalRule/></div>
         </h2>

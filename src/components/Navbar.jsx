@@ -13,10 +13,10 @@ const Navbar = () =>{
   }
 
   return (
-    <nav className='flex justify-between p-4 items-center font-medium'>
+    <nav className='flex justify-between m-2 items-center font-medium'>
         <div>
           <div className="logo">
-          <img src={logo} alt='logo' className='w-20 md:w-40 h-auto object-contain' />
+          <img src={logo} alt='logo' className='w-24 md:w-40 h-auto object-contain' />
           </div>
         </div>
 

@@ -13,12 +13,12 @@ const Info = () => {
       {/* Big Text */}
       <div>
         {/* More Info Heading */} 
-      <h2 className='text-4xl md:text-[72px] font-bold text-white uppercase text-center mt-20 md:mt-40 md:mb-7'>
+      <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-20 md:mt-40'>
         Crafting tailored
       </h2>
-      <h2 className='text-4xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
+      <h2 className='text-5xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
         Digital Solutions
-        <div className='mx-3 md:mx-[320px] mt-[-15px] md:mt-[10px]'><HorizontalRule/></div>
+        <div className='mx-2 md:mx-[320px] mt-[-15px]'><HorizontalRule/></div>
       </h2>
       <p className='text-2xl md:text-5xl font-bold text-center mx-5 md:mx-10 '>
         In the <span className='text-[#906EF0]'>ever-evolving digital landscape</span>, I offer a range of 

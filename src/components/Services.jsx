@@ -79,11 +79,11 @@ const Services = () => {
   return (
     <div>
       {/* Services Heading */}
-      <h2 className='text-[42px] md:text-[72px] font-bold text-white mt-20 md:mt-40 uppercase text-center'>
+      <h2 className='text-5xl md:text-[72px] font-bold text-white mt-20 md:mt-40 uppercase text-center'>
           What I do <span className='text-[#906EF0]'>best</span>
-          <div className='mx-7 mt-[-30px] md:mx-[400px] md:mt-[-35px]'><HorizontalRule/></div>
+          <div className='mx-2 mt-[-15px] md:mx-[400px]'><HorizontalRule/></div>
       </h2>
-      <p className='font-medium text-center text-[20px]'>
+      <p className='font-medium text-center text-lg md:text-xl'>
         Discover an array of <span className='text-[#906EF0]'>expert services customized</span> for your <span className='text-[#906EF0]'>needs</span>
       </p>
 
