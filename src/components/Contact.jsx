@@ -78,11 +78,11 @@ const Contact = () => {
       {/* Contact Heading */}
       <h2 className='text-[72px] font-bold text-white mt-10 uppercase text-center'>
           Let's start <span className='text-[#906EF0]'>building</span> your<span className='text-[#906EF0]'> vision</span>
-          <div className='mr-[68px] ml-[68px] mt-[-40px]'><HorizontalRule/></div>
+          <div className='mx-2 md:mx-14 mt-[-30px] md:mt-[-40px]'><HorizontalRule/></div>
       </h2>
 
       {/* Contact Form */}
-      <div className='border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-16 mt-16 shadow-2xl shadow-black'>
+      <div className='border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-4 md:mx-16 mt-16 shadow-2xl shadow-black'>
         <h4 className='text-center mt-3'>New Message</h4>
 
         <form className="rounded-3xl" onSubmit={handleSubmit}>
@@ -91,39 +91,39 @@ const Contact = () => {
           <div className="ml-8 mt-10">
             <label htmlFor="name">Name: </label>
             <input
-            className="appearance-none rounded ml-3 bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded ml-0 md:ml-3 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter your name"
+            placeholder="Enter name"
           />
           {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
           </div>
-          <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
+          <div className='mx-7 md:mr-[45px] md:ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
           {/* Email Field */}
           <div className="ml-8 mt-10">
             <label htmlFor="name">Email: </label>
             <input
-            className="appearance-none rounded ml-4 bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded md:ml-4 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email address"
+            placeholder="Enter email address"
           />
           {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
           </div>
-          <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
+          <div className='mx-7 md:mr-[45px] md:ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
           {/* Subject Field */}
           <div className="ml-8 mt-10">
             <label htmlFor="name">Subject: </label>
             <input
-            className="appearance-none rounded bg-transparent w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none rounded bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             id="subject"
             name="subject"
@@ -133,10 +133,10 @@ const Contact = () => {
           />
           {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
           </div>
-          <div className='mr-[45px] ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
+          <div className='mx-7 md:mr-[45px] md:ml-[30px] mt-[-15px]'><HorizontalRule2/></div>
 
           {/* Message Textarea */}
-          <div className="ml-8 mt-10">
+          <div className="ml-4 md:ml-8 mt-10">
             <textarea
             className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
             type="message"
@@ -151,7 +151,7 @@ const Contact = () => {
           </div>
 
           {/* submit Button */}
-          <div type="submit" className="text-right mt-5 mr-12 mb-5">
+          <div type="submit" className="text-right mt-5 mr-4 md:mr-12 mb-5">
           <Button1>
             Send
           </Button1>
