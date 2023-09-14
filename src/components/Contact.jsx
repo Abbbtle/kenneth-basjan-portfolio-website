@@ -145,7 +145,7 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Write your message here"
-            rows="10"
+            rows="15"
           />
           {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
           </div>
