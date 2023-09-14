@@ -54,12 +54,12 @@ const Testimonials = () => {
   
     return (
       <div>
-        <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[-40px]'>
+        <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40'>
           Hear what clients
         </h2>
         <h2 className='text-5xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
           Say about my work
-          <div className='mx-1 mt-[-15px] md:mt-[-40px]'><HorizontalRule/></div>
+          <div className='mx-1 mt-[-15px]'><HorizontalRule/></div>
         </h2>
         <p className='text-lg md:text-[20px] font-semibold text-center mx-5'>
           Nothing makes me happier than <span className="text-[#906EF0]">witnessing my clients' success and satisfaction</span>. Here are some kind 
