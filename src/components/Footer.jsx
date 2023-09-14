@@ -13,26 +13,26 @@ const Footer = () => {
         <FLine/>
       </div>
 
-      <div className='ml-40 mr-40 mt-10 md:flex justify-between'>
+      <div className=' md:mx-40 mt-10 flex flex-col md:flex-row items-center md:items-start justify-between '>
         {/* Logo */}
         <div className="logo">
-          <img src={logo} alt='logo' className='w-80 h-auto object-contain' />
+          <img src={logo} alt='logo' className='w-60 md:w-80 h-auto object-contain' />
         </div>
 
         <div className='md:flex'>
           {/* Socials */}
-          <div className='mr-20'>
+          <div className='md:mr-20'>
             <h4 className='uppercase font-medium text-center text-[22px] mt-5 text-white'>Socials</h4>
-            <div className='text-3xl mt-3 md:flex'>
-              <FaLinkedin className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer md:mr-5'/>
-              <FaGithub className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer md:mr-5 md:ml-5'/>
-              <FaDiscord className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer md:ml-5'/>
+            <div className='text-3xl mt-3 flex items-center md:flex-col md:space-y-7 space-x-10 md:space-x-0'>
+              <FaLinkedin className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/>
+              <FaGithub className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/>
+              <FaDiscord className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/>
             </div>
           </div>
           {/* Links */}
-          <div className='ml-20'>
+          <div className='md:ml-20'>
           <h4 className='uppercase font-medium text-[22px] mt-5 text-white text-center'>Links</h4>
-            <ul className='text-center text-[18px] font-medium uppercase text-[#A1A1A1]'>
+            <ul className='text-center text-[20px] font-medium uppercase text-[#A1A1A1]'>
               <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1 mt-1'>About</li>
               <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'>Services</li>
               <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'>Work</li>
