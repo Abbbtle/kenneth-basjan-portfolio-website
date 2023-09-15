@@ -18,10 +18,12 @@ const App = () => {
         <About/>
         <Services/>
         <Work/>
-        <Info/>
+        <div className="app -mx-2">
+          <Info/>
+        </div>
         <Flow/>
         <Testimonials/>
-        <div className="app mx-[-0.35rem]">
+        <div className="app -mx-2">
           <ScrollingText/>
         </div>
         <Contact/>
