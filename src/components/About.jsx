@@ -113,11 +113,8 @@ const About = () => {
                   <Popup>
                     Responsibilities:<br/><br/>
                     - Developing and maintaining web applications using WordPress, Elementor and other related technologies.<br/>
-                    - Managing and executing social media campaigns across multiple platforms. They create content, monitor analytics, and engage with the audience.<br/>
                     - Creating engaging and high-quality content for social media platforms. This can include graphics, videos, blog posts, and other forms of content.<br/>
-                    - Creating visually appealing graphics and designs for social media posts, ads, and other marketing materials.<br/>
                     - Managing client relationships, ensuring client satisfaction, and maintaining regular communication.<br/>
-                    - Developing and implementing digital marketing strategies that align with the client's goals and objectives.<br/>
                     - Creating compelling and effective copy for social media posts, ads, and other marketing materials.<br/>
                     - Monitoring and analyzing social media data to track performance, identify trends, and make data-driven decisions.<br/>
                     - Generating new business leads, developing proposals, and closing deals.
@@ -146,10 +143,7 @@ const About = () => {
                   <Popup>
                     Responsibilities:<br/><br/>
                     - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, Python, MERN and other related technologies.<br/>
-                    - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
                     - Implementing responsive design and ensuring cross-browser compatibility.<br/>
-                    - Participating in code reviews and providing constructive feedback to other developers.<br/>
-                    - Supporting the design and development of software programs under the guidance of senior developers.<br/>
                     - Work closely with other members of the development team to ensure that project tasks are being completed on time and within scope.<br/>
                     - Responsible for documenting my work and processes to ensure that other team members can understand and work on the code you write.<br/>
                   </Popup>
@@ -172,14 +166,12 @@ const About = () => {
                 <div className='md:mr-2'>
                   <Popup>
                     Responsibilities:<br/><br/>
-                    - Developing and maintaining web applications using HTML5, CSS3, JavaScript, Bootstrap, MERN and other related technologies.<br/>
+                    - Developing and maintaining web applications using JavaScript, Tailwind CSS, MERN and other related technologies.<br/>
                     - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
                     - Implementing responsive design and ensuring cross-browser compatibility.<br/>
                     - Paticipate in Hackathons with other developers, and also joining staff team to facilitate ABSA Hackathons.<br/>
                     - Participating in code reviews and providing constructive feedback to other developers.<br/>
                     - Supporting the design and development of software programs under the guidance of senior developers.<br/>
-                    - Work closely with other members of the development team to ensure that project tasks are being completed on time and within scope.<br/>
-                    - Responsible for documenting my work and processes to ensure that other team members can understand and work on the code you write.<br/>
                   </Popup>
                 </div>
                 <div className='md:ml-2'><Button2><a href="https://www.younglings.academy" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
