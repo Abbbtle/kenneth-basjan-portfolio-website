@@ -4,6 +4,7 @@ import FLine from './FLine';
 import {FaLinkedin} from 'react-icons/fa';
 import {FaGithub} from 'react-icons/fa';
 import {FaDiscord} from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return(
@@ -32,12 +33,12 @@ const Footer = () => {
           {/* Links */}
           <div className='md:ml-20'>
           <h4 className='uppercase font-medium text-[22px] mt-5 text-white text-center'>Links</h4>
-            <ul className='text-center text-[20px] font-medium uppercase text-[#A1A1A1]'>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1 mt-1'>About</li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'>Services</li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'>Work</li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'>Testimonials</li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'>Contact</li>
+            <ul className='text-center text-[20px] font-medium uppercase'>
+              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1 mt-1'><Link to='about' smooth={true} duration={2000} className='text-[#A1A1A1] cursor-pointer'>About</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='services' smooth={true} duration={1800} className='text-[#A1A1A1] cursor-pointer'>Services</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='work' smooth={true} duration={1400} className='text-[#A1A1A1] cursor-pointer'>Work</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='testimonials' smooth={true} duration={1200} className='text-[#A1A1A1] cursor-pointer'>Testimonials</Link></li>
+              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='contact' smooth={true} duration={1000} className='text-[#A1A1A1] cursor-pointer'>Contact</Link></li>
             </ul>
           </div>
         </div>

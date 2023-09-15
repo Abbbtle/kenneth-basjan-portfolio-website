@@ -74,11 +74,11 @@ const Contact = () => {
     }
   };
   return (
-    <div>
+    <div name='contact'>
       {/* Contact Heading */}
-      <h2 className='text-5xl md:text-[72px] font-bold text-white mt-10 uppercase text-center'>
+      <h2 className='text-5xl md:text-[72px] font-bold text-white mt-40 uppercase text-center'>
           Let's start <span className='text-[#906EF0]'>building</span> your<span className='text-[#906EF0]'> vision</span>
-          <div className='mx-2 md:mx-14 mt-[-15px] md:mt-[-40px]'><HorizontalRule/></div>
+          <div className='mx-2 md:mx-14 mt-[-15px]'><HorizontalRule/></div>
       </h2>
 
       {/* Contact Form */}

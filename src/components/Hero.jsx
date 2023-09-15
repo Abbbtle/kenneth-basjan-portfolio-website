@@ -1,6 +1,7 @@
 import React from 'react';
 import HorizontalRule from './HorizontalRule';
 import Button1 from './Button1';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
           something <span className='text-[#906EF0]'>extraordinary together</span>!
         </p>
         <div className='mt-4 md:mt-0'>
-          <Button1>Let's Talk</Button1>
+        <Link to='contact' smooth={true} duration={2000} className='hover:text-white cursor-pointer'><Button1>Let's Talk</Button1></Link>
         </div>
       </div>
     </div>

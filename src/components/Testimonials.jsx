@@ -53,13 +53,13 @@ const Testimonials = () => {
   }
   
     return (
-      <div>
+      <div name='testimonials'>
         <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40'>
           Hear what clients
         </h2>
         <h2 className='text-5xl md:text-[72px] font-bold text-[#906EF0] uppercase text-center'>
           Say about my work
-          <div className='mx-1 mt-[-15px]'><HorizontalRule/></div>
+          <div className='mx-1 mt-[-15px] md:mx-[290px]'><HorizontalRule/></div>
         </h2>
         <p className='text-lg md:text-[20px] font-semibold text-center mx-5'>
           Nothing makes me happier than <span className="text-[#906EF0]">witnessing my clients' success and satisfaction</span>. Here are some kind 
@@ -70,7 +70,7 @@ const Testimonials = () => {
         </p>
 
         {/* Slider */}
-        <div className="flex items-center justify-center py-8 mb-10 md:mb-40">
+        <div className="flex items-center justify-center py-8 mb-10 md:mb-40 md:mt-10">
           <div className="flex space-x-2 md:space-x-6 items-center md:items-stretch">
             {/* Left Arrow */}
             <button

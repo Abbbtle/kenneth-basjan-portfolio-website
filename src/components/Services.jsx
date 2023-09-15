@@ -77,7 +77,7 @@ const Services = () => {
   }
 
   return (
-    <div>
+    <div name='services'>
       {/* Services Heading */}
       <h2 className='text-5xl md:text-[72px] font-bold text-white mt-20 md:mt-40 uppercase text-center'>
           What I do <span className='text-[#906EF0]'>best</span>

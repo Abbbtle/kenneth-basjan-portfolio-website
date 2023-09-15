@@ -6,10 +6,11 @@ import {LuStars} from 'react-icons/lu'
 import Button1 from './Button1'
 import jam_favicon from '../assets/Images/Favicon/jam-favicon.webp'
 import tbm_favicon from '../assets/Images/Favicon/billiard-man-logo.png'
+import { Link } from 'react-scroll'
 
 const Work = () => {
   return (
-    <div>
+    <div name='work'>
       {/* Work Heading */} 
       <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[10px]'>
         Exploring
@@ -138,8 +139,8 @@ const Work = () => {
               <LuStars className='text-[70px]'/>
               <h3 className='uppercase text-center font-bold text-xl md:text-[40px] mt-10'>Your project goes here</h3>
               <p className='text-lg md:text-[20px] font-light mt-2'>Let's turn your idea into reality</p>
-              <div className='mt-20'>
-                <Button1>GET IN TOUCH</Button1>
+              <div className='mt-20 uppercase'>
+              <Link to='contact' smooth={true} duration={1400} className='hover:text-white cursor-pointer'><Button1>Get in touch</Button1></Link>
               </div>
             </div>
           </div>
