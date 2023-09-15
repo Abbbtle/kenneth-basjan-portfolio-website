@@ -16,7 +16,7 @@ const Hero = () => {
           Welcome to the World of <span className='text-[#906EF0]'>Innovation</span> and <span className='text-[#906EF0]'>Functionality</span>
         </h3>
       </div>
-      <div className='mx-2 md:mx-8'>
+      <div className='mx-2 md:mx-6'>
         <HorizontalRule />
       </div>
       <div className='flex justify-between flex-col md:flex-row mx-2 md:mx-10 items-center'>
