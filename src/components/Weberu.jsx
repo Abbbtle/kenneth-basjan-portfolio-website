@@ -16,7 +16,7 @@ const Weberu = ( { children } ) =>{
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto my-6 mx-4 md:mx-auto max-w-3xl">
               {/*content*/}
               <div className="border-white border-[1px] rounded-lg shadow-lg relative flex flex-col w-full bg-[#0D0D0D] focus:outline-none">
                 {/*body*/}
