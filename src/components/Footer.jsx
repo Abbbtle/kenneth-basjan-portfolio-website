@@ -3,7 +3,7 @@ import {logo} from '../assets';
 import FLine from './FLine';
 import {FaLinkedin} from 'react-icons/fa';
 import {FaGithub} from 'react-icons/fa';
-import {FaDiscord} from 'react-icons/fa';
+import {BsWhatsapp} from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
@@ -25,9 +25,9 @@ const Footer = () => {
           <div className='md:mr-20'>
             <h4 className='uppercase font-medium text-center text-[22px] mt-5 text-white'>Socials</h4>
             <div className='text-3xl mt-3 flex items-center md:flex-col md:space-y-7 space-x-10 md:space-x-0'>
-              <FaLinkedin className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/>
-              <FaGithub className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/>
-              <FaDiscord className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/>
+              <a href='https://www.linkedin.com/in/kenneth-basjan/' target='_blank' rel='noopener noreferrer'><FaLinkedin className='text-[#A1A1A1] hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/></a>
+              <a href='https://github.com/Abbbtle' target='_blank' rel='noopener noreferrer'><FaGithub className='text-[#A1A1A1] hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/></a>
+              <a href='https://wa.link/6fokxr' target='_blank' rel='noopener noreferrer'><BsWhatsapp className='text-[#A1A1A1] hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/></a>
             </div>
           </div>
           {/* Links */}
