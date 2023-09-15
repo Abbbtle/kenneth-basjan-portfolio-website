@@ -9,12 +9,12 @@ import HorizontalRule from './HorizontalRule';
 
 const techStackData = [
   {
-    name: "Frontend Development",
+    name: "Frontend",
     description: "Craft dynamic and responsive front-end solutions, bringing designs to life with precision and elegance.",
     image: frontend,
   },
   {
-    name: "Backend Development",
+    name: "Backend",
     description: "Build robust and scalable back-end systems to power your web applications with efficiency and reliability.",
     image: backend,
   },
@@ -24,7 +24,7 @@ const techStackData = [
     image: design,
   },
   {
-    name: "Social Media Marketing",
+    name: "Marketing",
     description: " Harness the power of social media to amplify your brand presence and engage your target audience.",
     image: smm,
   },
@@ -88,8 +88,8 @@ const Services = () => {
       </p>
 
       {/* Services Slider */}
-      <div className="flex items-center justify-center py-8">
-        <div className="flex space-x-8">
+      <div className="flex items-center justify-center py-8 mt-10">
+        <div className="flex space-x-2 md:space-x-8 items-center md:items-stretch">
           {/* Left Arrow */}
           <button
             className="text-white hover:text-[#906EF0]"
@@ -98,7 +98,7 @@ const Services = () => {
             &lt;
           </button>
           {displayData.map((service, index) => (
-            <div key={index} className="w-[35vw] h-auto flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
+            <div key={index} className="w-[60vw] md:w-[40vw] h-auto flex flex-col justify-end bg-[#0D0D0D] shadow-2xl shadow-black rounded-3xl border-[#808080] border-[1px] p-4">
               {/* Card Info */}
               <div className="flex flex-col justify-around items-center mt-5">
                 <p className="text-2xl font-semibold text-white">{service.name}</p>
