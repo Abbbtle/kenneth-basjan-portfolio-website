@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const App = () => {
   useEffect(() => {
 		AOS.init();
-		AOS.refresh();
+		AOS.refresh(); 
 	}, []);
   return (
     <BrowserRouter>

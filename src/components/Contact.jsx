@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import HorizontalRule from "./HorizontalRule";
 import HorizontalRule2 from "./HorizontalRule2";
 import Button1 from "./Button1";
+import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    organisation: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  
+  // reCAPTCHA Site Key
+  const recaptchaKey = "6LeopDUoAAAAAFQU3FcRr7selobGyP2vWuE2_19q";
 
   // Validation
   const [errors, setErrors] = useState({
     name: "",
     email: "",
-    subject: "",
+    organisation: "",
     message: "",
   });
 
@@ -40,13 +48,6 @@ const Contact = () => {
       newErrors.email = "";
     }
 
-    if (!formData.subject) {
-      newErrors.subject = "Please enter a subject";
-      isValid = false;
-    } else {
-      newErrors.subject = "";
-    }
-
     if (!formData.message) {
       newErrors.message = "Message is required";
       isValid = false;
@@ -58,6 +59,8 @@ const Contact = () => {
     return isValid;
   };
 
+  const recaptchaRef = useRef();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -66,102 +69,160 @@ const Contact = () => {
     }));
   };
 
+  // EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
+    setLoading(true);
+
+    // reCAPTCHA validation
+    if (validateForm() && recaptchaRef.current.getValue()) {
       console.log("Form submitted:", formData);
-      // Submission logic here
+
+      emailjs
+        .sendForm(
+          "service_bod2w8j",
+          "template_8281rug",
+          formRef.current,
+          "0WspAd3cLvGg9o1Q5"
+        )
+        .then(
+          () => {
+            setLoading(false);
+            alert("Thank you. I will get back to you as soon as possible.");
+  
+            setFormData({
+              name: "",
+              email: "",
+              organisation: "",
+              message: "",
+            });
+          })
+        .catch((error) => {
+          setLoading(false);
+          console.error(error);
+  
+          alert("Ahh, something went wrong. Please try again.");
+          } 
+        );
+    } else {
+      setLoading(false);
+      alert("Please complete the reCAPTCHA challenge and fill in all required fields.");
     }
   };
+
   return (
-    <div name='contact'>
+    <div name="contact">
       {/* Contact Heading */}
-      <h2 className='text-5xl md:text-[72px] font-bold text-white mt-40 uppercase text-center'>
-          Let's start <span className='text-[#906EF0]'>building</span> your<span className='text-[#906EF0]'> vision</span>
-          <div className='mx-2 md:mx-14 mt-[-15px]'><HorizontalRule/></div>
+      <h2 className="text-5xl md:text-[72px] font-bold text-white mt-40 uppercase text-center">
+        Let's start <span className="text-[#906EF0]">building</span> your
+        <span className="text-[#906EF0]"> vision</span>
+        <div className="mx-2 md:mx-14 mt-[-15px]">
+          <HorizontalRule />
+        </div>
       </h2>
 
       {/* Contact Form */}
-      <div className='border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-4 md:mx-16 mt-16 shadow-2xl shadow-black'>
-        <h4 className='text-center mt-3'>New Message</h4>
+      <div className="border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-4 md:mx-16 mt-16 shadow-2xl shadow-black">
+        <h4 className="text-center mt-3">New Message</h4>
 
-        <form className="rounded-3xl" onSubmit={handleSubmit}>
-
+        <form
+          ref={formRef}
+          className="rounded-3xl"
+          onSubmit={handleSubmit}
+        >
           {/* Name Field */}
           <div className="ml-9 mt-10">
             <label htmlFor="name">Name: </label>
             <input
-            className="appearance-none rounded ml-0 md:ml-3 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter name"
-          />
-          {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
+              className="appearance-none rounded ml-0 md:ml-3 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter name"
+            />
+            {errors.name && (
+              <p className="text-red-500 text-xs">{errors.name}</p>
+            )}
           </div>
-          <div className='mx-7 md:mx-9 mt-[-15px]'><HorizontalRule2/></div>
+          <div className="mx-7 md:mx-9 mt-[-15px]">
+            <HorizontalRule2 />
+          </div>
 
           {/* Email Field */}
           <div className="ml-9 mt-10">
-            <label htmlFor="name">Email: </label>
+            <label htmlFor="email">Email: </label>
             <input
-            className="appearance-none rounded md:ml-4 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter email address"
-          />
-          {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+              className="appearance-none rounded md:ml-4 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter email address"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs">{errors.email}</p>
+            )}
           </div>
-          <div className='mx-7 md:mx-9 mt-[-15px]'><HorizontalRule2/></div>
+          <div className="mx-7 md:mx-9 mt-[-15px]">
+            <HorizontalRule2 />
+          </div>
 
-          {/* Subject Field */}
+          {/* Organisation Field */}
           <div className="ml-9 mt-10">
-            <label htmlFor="name">Subject: </label>
+            <label htmlFor="organisation">Organisation: </label>
             <input
-            className="appearance-none rounded bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            placeholder="Enter subject"
-          />
-          {errors.subject && <p className="text-red-500 text-xs">{errors.subject}</p>}
+              className="appearance-none rounded bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              id="organisation"
+              name="organisation"
+              value={formData.organisation}
+              onChange={handleChange}
+              placeholder="Enter organisation"
+            />
           </div>
-          <div className='mx-7 md:mx-9 mt-[-15px]'><HorizontalRule2/></div>
+          <div className="mx-7 md:mx-9 mt-[-15px]">
+            <HorizontalRule2 />
+          </div>
 
           {/* Message Textarea */}
           <div className="ml-4 md:ml-8 mt-10">
             <textarea
-            className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] md:w-[97%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-            type="message"
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Write your message here"
-            rows="15"
-          />
-          {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+              className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] md:w-[97%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Write your message here"
+              rows="15"
+            />
+            {errors.message && (
+              <p className="text-red-500 text-xs">{errors.message}</p>
+            )}
           </div>
+
+        {/* Add reCAPTCHA */}
+        <div className="ml-9 mt-10">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={recaptchaKey}
+          onChange={() => {
+            // Handle reCAPTCHA change if needed
+          }}
+        />
 
           {/* submit Button */}
-          <div type="submit" className="text-right mt-5 mr-4 md:mr-12 mb-5">
-          <Button1>
-            Send
-          </Button1>
+          <div className="text-right mt-5 mr-4 md:mr-12 mb-5">
+            <Button1>
+              {loading ? "Sending..." : "Send"}
+            </Button1>
           </div>
         </form>
-
-
       </div>
     </div>
   );
 };
 
-export default Contact
+export default Contact;

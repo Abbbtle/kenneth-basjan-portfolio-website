@@ -1,6 +1,5 @@
 import React from 'react';
 import { kenneth1 } from '../assets';
-import HorizontalRule from './HorizontalRule';
 import { LuGraduationCap } from 'react-icons/lu';
 import { FaUserTie } from 'react-icons/fa';
 import TechStack from './TechStack';
