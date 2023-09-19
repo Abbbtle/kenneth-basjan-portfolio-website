@@ -53,7 +53,11 @@ const Testimonials = () => {
   }
   
     return (
-      <div name='testimonials'>
+      <div 
+        name='testimonials'
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        >
         <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40'>
           Hear what clients
         </h2>

@@ -11,7 +11,12 @@ import soon from '../assets/Images/coming-soon.gif';
 
 const About = () => {
   return (
-    <div name='about' className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
+    <div 
+      name='about' 
+      data-aos="zoom-in"
+      data-aos-delay="600"
+      data-aos-duration="1000"
+      className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
       <div className='mx-2 md:mx-10 mt-10'>
 
         <h2 className='text-center md:text-left text-4xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
@@ -32,7 +37,11 @@ const About = () => {
         </div>
 
          
-        <div className='bg-[#1E1E1E] mt-5 md:mt-10 rounded-3xl p-4  md:p-10'>
+        <div 
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+          className='bg-[#1E1E1E] mt-5 md:mt-10 rounded-3xl p-4  md:p-10'>
 
           {/* Education Heading */}
           <h3 className='mt-5 md:mt-0 text-center md:text-left text-5xl font-semibold text-white mb-5'>

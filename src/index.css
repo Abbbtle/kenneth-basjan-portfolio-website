@@ -94,7 +94,7 @@ button:focus-visible {
   left: -2px; 
   right: -2px;
   bottom: -2px; 
-  border: 2px solid #906EF0;
+  /* border: 2px solid #906EF0; */
   z-index: -1;
 }
 
@@ -121,7 +121,7 @@ button:focus-visible {
   left: -2px; 
   right: -2px;
   bottom: -2px; 
-  border: 2px solid #906EF0;
+  /* border: 2px solid #906EF0; */
   z-index: -1;
 }
 
@@ -151,7 +151,7 @@ button:focus-visible {
   left: -2px; 
   right: -2px;
   bottom: -2px; 
-  border: 2px solid #906EF0;
+  /* border: 2px solid #906EF0; */
   z-index: -1;
 }
 

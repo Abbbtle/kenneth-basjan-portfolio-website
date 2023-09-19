@@ -10,7 +10,11 @@ import { Link } from 'react-scroll'
 
 const Work = () => {
   return (
-    <div name='work'>
+    <div 
+      name='work'
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      >
       {/* Work Heading */} 
       <h2 className='text-5xl md:text-[72px] font-bold text-white uppercase text-center mt-40 md:mb-[10px]'>
         Exploring
@@ -31,7 +35,9 @@ const Work = () => {
       {/* Past Work Cards */}
       <div>
         {/* Card 1 */}
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-20 lg:px-2">
+        <div 
+          data-aos="fade-up" data-aos-duration="1500" 
+          className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-20 lg:px-2">
           <div className="border-[1px] border-[#808080] relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
             <svg
               viewBox="0 0 1024 1024"
@@ -46,7 +52,7 @@ const Work = () => {
                 </radialGradient>
               </defs>
             </svg>
-            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
+            <div  className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
               <div className='bg-[#795a5a] mb-5 rounded-[10px] w-14 h-14 items-center flex justify-center shadow-inner shadow-[#d1afaf]'>
                   <img 
                     src= {jam_favicon} 
@@ -82,7 +88,7 @@ const Work = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-20 lg:px-2">
+        <div data-aos="fade-up" data-aos-duration="1500" className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-20 lg:px-2">
           <div className="border-[1px] border-[#808080] relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
             <svg
               viewBox="0 0 1024 1024"
@@ -133,7 +139,9 @@ const Work = () => {
         </div>
 
         {/* Card 3 */}
-        <div className='mx-auto max-w-6xl py-24 sm:px-6 sm:py-20 lg:px-8'>
+        <div 
+          data-aos="fade-up" data-aos-duration="1500"
+          className='mx-auto max-w-6xl py-24 sm:px-6 sm:py-20 lg:px-8'>
           <div className='bg-[#181818] shadow-lg shadow-black rounded-3xl border-dashed border-[1px] border-[#808080]'>
             <div className='flex flex-col items-center mt-28 mb-28 justify-center'>
               <LuStars className='text-[70px]'/>

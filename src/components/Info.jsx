@@ -6,7 +6,10 @@ const Info = () => {
   return (
     <div>
       {/* Background Image */}
-      <div className='w-full h-auto mt-20 md:mt-40'>
+      <div 
+        data-aos="fade-up" 
+        data-aos-duration="3000" 
+        className='w-full h-auto mt-40'>
         <img src= {presentation} alt="" />
       </div>
 
@@ -20,7 +23,10 @@ const Info = () => {
         Digital Solutions
         <div className='mx-2 md:mx-[320px] mt-[-15px]'><HorizontalRule/></div>
       </h2>
-      <p className='text-2xl md:text-5xl font-bold text-center mx-5 md:mx-10 '>
+      <p 
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className='text-2xl md:text-5xl font-bold text-center mx-5 md:mx-10 '>
         In the <span className='text-[#906EF0]'>ever-evolving digital landscape</span>, I offer a range of 
         <span className='text-[#906EF0]'> bespoke services</span> to meet your <span className='text-[#906EF0]'>specific needs</span>. 
         Whether you're an <span className='text-[#906EF0]'>ambitious startup</span> or an <span className='text-[#906EF0]'>established enterprise</span>, 

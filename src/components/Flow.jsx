@@ -4,11 +4,18 @@ const Flow = () => {
   return (
     <div className='mt-40 mx-10 md:mx-0 md:mr-10 md:flex justify-evenly'>
 
-      <div className='uppercase text-2xl mb-10 md:text-[60px] font-bold text-center md:text-start md:ml-10 md:mr-40'>
+      <div 
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-sine" className='uppercase text-2xl mb-10 md:text-[60px] font-bold text-center md:text-start md:ml-10 md:mr-40'>
         <h1>My Work <br /><span className='text-[#906EF0]'>Flow</span></h1>
       </div>
 
-      <div className='md:mr-10'>
+      <div 
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className='md:mr-10'>
         {/* Vertical Timeline */}
         <ol className="relative border-l-[4px] border-gray-200">                  
             <li className="mb-10  ">            

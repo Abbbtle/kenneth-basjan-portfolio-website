@@ -10,7 +10,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    organisation: "",
+    company: "",
     message: "",
   });
 
@@ -23,7 +23,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({
     name: "",
     email: "",
-    organisation: "",
+    company: "",
     message: "",
   });
 
@@ -93,7 +93,7 @@ const Contact = () => {
             setFormData({
               name: "",
               email: "",
-              organisation: "",
+              company: "",
               message: "",
             });
           })
@@ -113,7 +113,7 @@ const Contact = () => {
   return (
     <div name="contact">
       {/* Contact Heading */}
-      <h2 className="text-5xl md:text-[72px] font-bold text-white mt-40 uppercase text-center">
+      <h2 className="text-5xl md:text-[72px] font-bold text-white mt-20 md:mt-40 uppercase text-center">
         Let's start <span className="text-[#906EF0]">building</span> your
         <span className="text-[#906EF0]"> vision</span>
         <div className="mx-2 md:mx-14 mt-[-15px]">
@@ -122,7 +122,10 @@ const Contact = () => {
       </h2>
 
       {/* Contact Form */}
-      <div className="border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-4 md:mx-16 mt-16 shadow-2xl shadow-black">
+      <div 
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-4 md:mx-16 mt-16 shadow-2xl shadow-black">
         <h4 className="text-center mt-3">New Message</h4>
 
         <form
@@ -172,15 +175,15 @@ const Contact = () => {
 
           {/* Organisation Field */}
           <div className="ml-9 mt-10">
-            <label htmlFor="organisation">Organisation: </label>
+            <label htmlFor="organisation">Company: </label>
             <input
-              className="appearance-none rounded bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none rounded bg-transparent w-[60%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               id="organisation"
               name="organisation"
               value={formData.organisation}
               onChange={handleChange}
-              placeholder="Enter organisation"
+              placeholder="Enter Company"
             />
           </div>
           <div className="mx-7 md:mx-9 mt-[-15px]">
@@ -205,9 +208,9 @@ const Contact = () => {
 
           
           {/* submit Button */}
-          <div className="flex flex-col md:flex-row justify-between items-center text-right mt-5 md:mr-12 mb-5">
+          <div className="flex flex-col md:flex-row justify-between md:items-center text-right mt-5 md:mr-12 mb-5">
             {/* Add reCAPTCHA */}
-            <div className="md:ml-8">
+            <div className="mx-auto md:ml-8">
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={recaptchaKey}
@@ -215,7 +218,7 @@ const Contact = () => {
                 }}
               />
             </div>
-            <div className="mt-5 md:mt-0">
+            <div className="mx-auto md:mx-0 mt-5 md:mt-0">
               <Button1>
                 {loading ? "Sending..." : "Send"}
               </Button1>
