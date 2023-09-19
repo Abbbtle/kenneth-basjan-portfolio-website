@@ -203,16 +203,16 @@ const Contact = () => {
             )}
           </div>
 
-        {/* Add reCAPTCHA */}
-        <div className="ml-9 mt-10">
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey={recaptchaKey}
-          onChange={() => {
-            // Handle reCAPTCHA change if needed
-          }}
-        />
-
+          {/* Add reCAPTCHA */}
+          <div className="ml-9 mt-10">
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={'6LeopDUoAAAAAFQU3FcRr7selobGyP2vWuE2_19q'}
+              onChange={() => {
+                // Handle reCAPTCHA change if needed
+              }}
+            />
+          </div>
           {/* submit Button */}
           <div className="text-right mt-5 mr-4 md:mr-12 mb-5">
             <Button1>
