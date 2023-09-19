@@ -203,21 +203,23 @@ const Contact = () => {
             )}
           </div>
 
-          {/* Add reCAPTCHA */}
-          <div className="ml-9 mt-10">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={'6LeopDUoAAAAAFQU3FcRr7selobGyP2vWuE2_19q'}
-              onChange={() => {
-                // Handle reCAPTCHA change if needed
-              }}
-            />
-          </div>
+          
           {/* submit Button */}
-          <div className="text-right mt-5 mr-4 md:mr-12 mb-5">
-            <Button1>
-              {loading ? "Sending..." : "Send"}
-            </Button1>
+          <div className="flex flex-col md:flex-row justify-between items-center text-right mt-5 md:mr-12 mb-5">
+            {/* Add reCAPTCHA */}
+            <div className="md:ml-8">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={recaptchaKey}
+                onChange={() => {
+                }}
+              />
+            </div>
+            <div className="mt-5 md:mt-0">
+              <Button1>
+                {loading ? "Sending..." : "Send"}
+              </Button1>
+            </div>
           </div>
         </form>
       </div>
