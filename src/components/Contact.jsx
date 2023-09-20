@@ -63,8 +63,9 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
+
+    setFormData((formData) => ({
+      ...formData,
       [name]: value,
     }));
   };
@@ -80,10 +81,10 @@ const Contact = () => {
 
       emailjs
         .sendForm(
-          "service_bod2w8j",
-          "template_8281rug",
+          "service_0y90kmk",
+          "template_hf61l0d",
           formRef.current,
-          "0WspAd3cLvGg9o1Q5"
+          "czPlhKpgkHGDhO1RW"
         )
         .then(
           () => {
@@ -173,15 +174,15 @@ const Contact = () => {
             <HorizontalRule2 />
           </div>
 
-          {/* Organisation Field */}
+          {/* Company Field */}
           <div className="ml-9 mt-10">
-            <label htmlFor="organisation">Company: </label>
+            <label htmlFor="company">Company: </label>
             <input
               className="appearance-none rounded bg-transparent w-[60%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
-              id="organisation"
-              name="organisation"
-              value={formData.organisation}
+              id="company"
+              name="company"
+              value={formData.company}
               onChange={handleChange}
               placeholder="Enter Company"
             />
