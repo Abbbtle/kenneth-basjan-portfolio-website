@@ -88,13 +88,11 @@ button:focus-visible {
 }
 
 .button1::before {
-  content: ''; 
   position: fixed;
   top: -2px;
   left: -2px; 
   right: -2px;
   bottom: -2px; 
-  /* border: 2px solid #906EF0; */
   z-index: -1;
 }
 
@@ -115,13 +113,11 @@ button:focus-visible {
 }
 
 .button2::before {
-  content: ''; 
   position: fixed;
   top: -2px;
   left: -2px; 
   right: -2px;
   bottom: -2px; 
-  /* border: 2px solid #906EF0; */
   z-index: -1;
 }
 
@@ -145,13 +141,11 @@ button:focus-visible {
 }
 
 .popup::before {
-  content: ''; 
   position: fixed;
   top: -2px;
   left: -2px; 
   right: -2px;
   bottom: -2px; 
-  /* border: 2px solid #906EF0; */
   z-index: -1;
 }
 
@@ -179,20 +173,5 @@ button:focus-visible {
 }
 
 * {
-  @apply cursor-none md:cursor-auto
+  cursor: none;
 }
-
-/* ========== Scroll ========== */
-
-/* Tailwind classes for the scrolling container */
-/* .scrolling-container {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-} */
-
-/* Tailwind classes for the scrolling content */
-/* .scrolling-content {
-  display: inline-block;
-  font-size: 200px;
-} */ 
