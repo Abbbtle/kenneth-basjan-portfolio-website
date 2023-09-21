@@ -4,7 +4,7 @@ import HorizontalRule2 from "./HorizontalRule2";
 import Button1 from "./Button1";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
@@ -82,10 +82,10 @@ const Contact = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    className:"font-medium text-md"
+    className:"font-medium text-md md:mx-0"
     });
 
-  const fields_error = () => toast.warn("Ahh, something went wrong. Please try again.", {
+  const fields_error = () => toast.error("Ahh, something went wrong. Please try again.", {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -94,7 +94,7 @@ const Contact = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    className:"font-medium text-md"
+    className:"font-medium text-md md:mx-0"
     });
 
   const reCAPTCHA_error = () => toast.error("Please complete the reCAPTCHA challenge and fill in all required fields.", {
@@ -106,9 +106,8 @@ const Contact = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    className:"font-medium text-md mx-6"
+    className:"font-medium text-md mx-6 md:mx-0"
     });
-
 
   // EmailJS
   const handleSubmit = (e) => {
