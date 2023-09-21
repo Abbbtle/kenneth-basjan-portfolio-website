@@ -5,6 +5,11 @@ Dependencies:
 Install Node on your computer (Use the stable version):
 https://nodejs.org/en
 
+or
+
+(In your cmd / terminal)
+npm i node
+
 Vite:
 npm create vite@latest
 
