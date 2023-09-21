@@ -162,6 +162,8 @@ button:focus-visible {
 }
 
 /*========== Cursor ===========*/
+/* Media query for Medium screens */
+@media screen and (min-width: 768px) {
 .custom-cursor {
   width: 10px;
   height: 10px;
@@ -174,9 +176,10 @@ button:focus-visible {
   mix-blend-mode: difference;
   transition: width 0.2s, height 0.2s;
 }
+}
 
 * {
-  cursor: none;
+  @apply cursor-none md:cursor-auto
 }
 
 /* ========== Scroll ========== */
@@ -193,4 +196,3 @@ button:focus-visible {
   display: inline-block;
   font-size: 200px;
 } */ 
-

@@ -11,7 +11,7 @@ import soon from '../assets/Images/coming-soon.gif';
 
 const About = () => {
   return (
-    <div className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
+    <div name='about' className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
       <div className='mx-2 md:mx-10 mt-10'>
 
         <h2 className='text-center md:text-left text-4xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>

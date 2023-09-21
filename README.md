@@ -36,3 +36,6 @@ npm i react-router-dom
 
 React Scroll:
 npm i react-scroll
+
+Toastify:
+npm i react-toastify
