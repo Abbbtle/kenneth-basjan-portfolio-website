@@ -4,6 +4,8 @@ import HorizontalRule2 from "./HorizontalRule2";
 import Button1 from "./Button1";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const formRef = useRef();
@@ -70,6 +72,44 @@ const Contact = () => {
     }));
   };
 
+  // Toast Notification Functions
+  const success = () => toast.success("Thank you. I will get back to you as soon as possible.", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    className:"font-medium text-md"
+    });
+
+  const fields_error = () => toast.warn("Ahh, something went wrong. Please try again.", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    className:"font-medium text-md"
+    });
+
+  const reCAPTCHA_error = () => toast.error("Please complete the reCAPTCHA challenge and fill in all required fields.", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    className:"font-medium text-md mx-6"
+    });
+
+
   // EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -89,7 +129,8 @@ const Contact = () => {
         .then(
           () => {
             setLoading(false);
-            alert("Thank you. I will get back to you as soon as possible.");
+            //Toastify
+            success();
   
             setFormData({
               name: "",
@@ -101,13 +142,14 @@ const Contact = () => {
         .catch((error) => {
           setLoading(false);
           console.error(error);
-  
-          alert("Ahh, something went wrong. Please try again.");
+          //Toastify
+          fields_error();
           } 
         );
     } else {
       setLoading(false);
-      alert("Please complete the reCAPTCHA challenge and fill in all required fields.");
+      //Toastify
+      reCAPTCHA_error();
     }
   };
 
@@ -220,7 +262,7 @@ const Contact = () => {
               />
             </div>
             <div className="mx-auto md:mx-0 mt-5 md:mt-0">
-              <Button1>
+              <Button1 onClick={handleSubmit}>
                 {loading ? "Sending..." : "Send"}
               </Button1>
             </div>
