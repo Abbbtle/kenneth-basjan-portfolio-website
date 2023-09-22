@@ -34,7 +34,7 @@ const Hero = () => {
           something <span className='text-[#906EF0]'>extraordinary together</span>!
         </p>
         <div className='mt-4 md:mt-0'>
-        <Link to='contact' smooth={true} duration={2000} className='hover:text-white cursor-pointer'><Button1>Let's Talk</Button1></Link>
+        <a href='https://drive.google.com/file/d/1y3UbFH_uUlPKSGk9DIzxdQuO9CmQN1OI/view?usp=sharing' target="_blank" rel="noopener noreferrer" className='hover:text-white cursor-pointer'><Button1>Download CV</Button1></a>
         </div>
       </div>
     </div>
