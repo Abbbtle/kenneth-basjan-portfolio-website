@@ -111,7 +111,7 @@ const About = () => {
                 <p className='text-white text-md md:text-[16px]'>Weberu</p>
                 <p className='text-[#906EF0]'>Nov 2021 - Present</p>
                 <p className="text-[#906EF0]">Remote</p>
-                <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
+                <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0  md:space-x-2'>
                   <div className='md:mr-2'>
                     <Popup>
                       Responsibilities:<br/><br/>
