@@ -49,6 +49,7 @@ const About = () => {
                 <p className='text-lg md:text-[18px] font-semibold text-white'>National Diploma in Information Technology</p>
                 <p className='text-white text-md md:text-[16px]'>Central University of Technology: Bloemfontein</p>
                 <p className='text-[#906EF0]'>Jan 2016 - Nov 2019</p>
+                <p className="text-[#906EF0]">Bloemfontein, Free State, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
@@ -75,6 +76,7 @@ const About = () => {
                 <p className='text-lg md:text-[18px] font-semibold text-white'>Creative Business 101 for Videographers</p>
                 <p className='text-white text-md md:text-[16px]'>ORMS Cape Town School of Photography</p>
                 <p className='text-[#906EF0]'>Aug 2021</p>
+                <p className="text-[#906EF0]">Remote</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
@@ -98,7 +100,7 @@ const About = () => {
               Experience
             </h3>
 
-          <div className='md:flex md:justify-between'>
+          <div className='md:flex md:justify-between md:mx-10 md:mb-5'>
             {/* Work Experience 1 Details */}
             <div className='flex'>
               <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
@@ -108,6 +110,7 @@ const About = () => {
                 <p className='text-lg md:text-[18px] font-semibold text-white'>Founder</p>
                 <p className='text-white text-md md:text-[16px]'>Weberu</p>
                 <p className='text-[#906EF0]'>Nov 2021 - Present</p>
+                <p className="text-[#906EF0]">Remote</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
@@ -138,6 +141,7 @@ const About = () => {
                 <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
                 <p className='text-white text-md md:text-[16px]'>UVU Africa - Capaciti Division</p>
                 <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
+                <p className="text-[#906EF0]">Cape Town, Western Cape, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
@@ -152,7 +156,9 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </div>
 
+          <div className="md:flex md:justify-between md:mx-10 md:mt-5">
             {/* Work Experience 3 Details */}
             <div className='flex mt-5 md:mt-0'>
               <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
@@ -162,6 +168,7 @@ const About = () => {
                 <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer</p>
                 <p className='text-white text-md md:text-[16px]'>Younglings Africa</p>
                 <p className='text-[#906EF0]'>July 2023 - Present</p>
+                <p className="text-[#906EF0]">Cape Town, Western Cape, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
@@ -175,6 +182,34 @@ const About = () => {
                     </Popup>
                   </div>
                   <div className='md:ml-2'><Button2><a href="https://www.younglings.academy" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Work Experience 4 Details */}
+            <div className='flex mt-5 md:mt-0'>
+              <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
+                <FaUserTie />
+              </div>
+              <div>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Fullstack Web Developer</p>
+                <p className='text-white text-md md:text-[16px]'>Empire Partner Foundation</p>
+                <p className='text-[#906EF0]'>Oct 2023 - Jan 2024</p>
+                <p className="text-[#906EF0]">Remote</p>
+                <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
+                  <div className='md:mr-2'>
+                    <Popup>
+                      Responsibilities:<br/><br/>
+                      - Crafted a robust fullstack web application collaboratively using HTML, CSS, JavaScript, AJAX, jQuery, Python, Django, and Bootstrap in a team of three developers.<br/>
+                      - Enhanced skills during tenure at Younglings Africa, gaining valuable experience at Empire Partner Foundation.<br/>
+                      - Conducted efficient daily standup meetings online.<br/>
+                      - Utilised Microsoft Planner and various other Microsoft tools for meticulous planning.<br/>
+                      - Prepared a User Stories Document outlining each component's functionality, appearance, and user experience.<br/>
+                      - Developed a comprehensive pitch deck and ERD diagram to streamline the development process.<br/>
+                      - Documentation significantly facilitated the two-sprint development phase over four weeks.<br/>
+                    </Popup>
+                  </div>
+                  <div className='md:ml-2'><Button2><a href="https://empirepartnerfoundation.org" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
                 </div>
               </div>
             </div>

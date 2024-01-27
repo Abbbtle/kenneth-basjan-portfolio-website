@@ -15,6 +15,9 @@ import chatgpt from '../assets/Images/Logos/chatgpt.png'
 import notion from '../assets/Images/Logos/notion.png'
 import java from '../assets/Images/Logos/java.png'
 import python from '../assets/Images/Logos/python.svg'
+import django from '../assets/Images/Logos/django-icon.webp'
+import postgres from '../assets/Images/Logos/PostgreSQL.png'
+import bootstrap from '../assets/Images/Logos/bootstrap.png'
 
 const techStackData = [
   {
@@ -86,6 +89,21 @@ const techStackData = [
     name: "Python",
     category: "Language",
     image: python,
+  },
+  {
+    name: "Django",
+    category: "Python Framework",
+    image: django,
+  },
+  {
+    name: "PostgresSQL",
+    category: "SQL Database",
+    image: postgres,
+  },
+  {
+    name: "Bootstrap",
+    category: "Styling",
+    image: bootstrap,
   }
 ];
 
