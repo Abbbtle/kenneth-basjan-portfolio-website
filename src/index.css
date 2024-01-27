@@ -175,3 +175,12 @@ button:focus-visible {
 * {
   cursor: none;
 }
+
+/*========== Media Queries ===========*/
+@media (prefers-color-scheme: light) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #1E1E1E;
+
+  }
+}
