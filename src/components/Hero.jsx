@@ -34,7 +34,7 @@ const Hero = () => {
           something <span className='text-[#906EF0]'>extraordinary together</span>!
         </p>
         <div className='mt-4 md:mt-0'>
-        <a href='https://drive.google.com/file/d/1y3UbFH_uUlPKSGk9DIzxdQuO9CmQN1OI/view?usp=sharing' target="_blank" rel="noopener noreferrer" className='hover:text-white cursor-pointer'><Button1>Download CV</Button1></a>
+        <a href='https://drive.google.com/file/d/1Q9Wn0ztTnxIud92IJfTbDLuDF8dHedXW/view?usp=sharing' target="_blank" rel="noopener noreferrer" className='hover:text-white cursor-pointer'><Button1>Download CV</Button1></a>
         </div>
       </div>
     </div>
