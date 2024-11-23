@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className='text-[#808080] text-center mt-20 mb-10'>
-        <p>© 2023 Kenneth Basjan. All Rights Reserved.</p>
+        <p>© 2024 Kenneth Basjan. All Rights Reserved.</p>
       </div>
     </div>
   );
