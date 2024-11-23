@@ -19,7 +19,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   
   // reCAPTCHA Site Key
-  const recaptchaKey = "6LeopDUoAAAAAFQU3FcRr7selobGyP2vWuE2_19q";
+  const recaptchaKey = "6LfF3IcqAAAAAKmXiI5ajgO1xcVfum9gIpYWp7Qx";
 
   // Validation
   const [errors, setErrors] = useState({
@@ -110,47 +110,52 @@ const Contact = () => {
     });
 
   // EmailJS
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
+  
     // reCAPTCHA validation
     if (validateForm() && recaptchaRef.current.getValue()) {
-      console.log("Form submitted:", formData);
-
-      emailjs
-        .sendForm(
-          "service_0y90kmk",
-          "template_hf61l0d",
-          formRef.current,
-          "czPlhKpgkHGDhO1RW"
-        )
-        .then(
-          () => {
-            setLoading(false);
-            //Toastify
-            success();
-  
-            setFormData({
-              name: "",
-              email: "",
-              company: "",
-              message: "",
+      const token = recaptchaRef.current.getValue();
+      
+      try {
+        // Send the token to your backend for verification
+        const response = await axios.post('http://localhost:5000/api/recaptcha', { token });
+        
+        if (response.data.success) {
+          // If successful, send email with EmailJS
+          emailjs
+            .sendForm(
+              "service_0y90kmk",
+              "template_hf61l0d",
+              formRef.current,
+              "czPlhKpgkHGDhO1RW"
+            )
+            .then(() => {
+              setLoading(false);
+              success();
+              setFormData({ name: "", email: "", company: "", message: "" });
+            })
+            .catch((error) => {
+              setLoading(false);
+              console.error(error);
+              fields_error();
             });
-          })
-        .catch((error) => {
+        } else {
           setLoading(false);
-          console.error(error);
-          //Toastify
-          fields_error();
-          } 
-        );
-    } else {
-      setLoading(false);
-      //Toastify
-      reCAPTCHA_error();
-    }
-  };
+          reCAPTCHA_error();
+        }
+        } catch (error) {
+          setLoading(false);
+          console.error('Error verifying reCAPTCHA:', error);
+          reCAPTCHA_error();
+        }
+      } else {
+        setLoading(false);
+        reCAPTCHA_error();
+      }
+    };
+
 
   return (
     <div name="contact">
