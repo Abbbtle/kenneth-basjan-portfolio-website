@@ -1,5 +1,5 @@
 import React from 'react';
-import { kenneth1 } from '../assets';
+import { kenneth1 } from '../assets/Images/Kenneth/kenneth-younglings.png';
 import { LuGraduationCap } from 'react-icons/lu';
 import { FaUserTie } from 'react-icons/fa';
 import TechStack from './TechStack';
