@@ -19,7 +19,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   
   // reCAPTCHA Site Key
-  const recaptchaKey = "6LfF3IcqAAAAAKmXiI5ajgO1xcVfum9gIpYWp7Qx";
+  const recaptchaKey = process.env.RECAPTCHA_SITE_KEY;
 
   // Validation
   const [errors, setErrors] = useState({
