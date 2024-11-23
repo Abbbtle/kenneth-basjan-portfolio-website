@@ -165,9 +165,9 @@ const About = () => {
                 <FaUserTie />
               </div>
               <div>
-                <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer</p>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
                 <p className='text-white text-md md:text-[16px]'>Younglings Africa</p>
-                <p className='text-[#906EF0]'>July 2023 - Present</p>
+                <p className='text-[#906EF0]'>July 2023 - January 2024</p>
                 <p className="text-[#906EF0]">Cape Town, Western Cape, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
@@ -192,9 +192,9 @@ const About = () => {
                 <FaUserTie />
               </div>
               <div>
-                <p className='text-lg md:text-[18px] font-semibold text-white'>Fullstack Web Developer</p>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Fullstack Web Developer Intern</p>
                 <p className='text-white text-md md:text-[16px]'>Empire Partner Foundation</p>
-                <p className='text-[#906EF0]'>Oct 2023 - Jan 2024</p>
+                <p className='text-[#906EF0]'>Oct 2023 - January 2024</p>
                 <p className="text-[#906EF0]">Remote</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
@@ -222,23 +222,27 @@ const About = () => {
                 <FaUserTie />
               </div>
               <div>
-                <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer</p>
-                <p className='text-white text-md md:text-[16px]'>Younglings Africa</p>
-                <p className='text-[#906EF0]'>July 2023 - Present</p>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>AWS Developer Intern</p>
+                <p className='text-white text-md md:text-[16px]'>ABSA Group</p>
+                <p className='text-[#906EF0]'>January 2024 - May 2024</p>
                 <p className="text-[#906EF0]">Cape Town, Western Cape, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
-                      Responsibilities:<br/><br/>
-                      - Developing and maintaining web applications using JavaScript, Tailwind CSS, MERN and other related technologies.<br/>
-                      - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
-                      - Implementing responsive design and ensuring cross-browser compatibility.<br/>
-                      - Paticipate in Hackathons with other developers, and also joining staff team to facilitate ABSA Hackathons.<br/>
-                      - Participating in code reviews and providing constructive feedback to other developers.<br/>
-                      - Supporting the design and development of software programs under the guidance of senior developers.<br/>
+                      Skills:<br/><br/>
+                      - Amazon Simple Notification Service (SNS)<br/>
+                      - Amazon SQS<br/>
+                      - AWS CodePipeline<br/>
+                      - AWS Lambda<br/>
+                      - Amazon CloudWatch<br/>
+                      - Amazon Redshift<br/>
+                      - Amazon Dynamodb<br/>
+                      - Amazon Connect<br/>
+                      - AWS CloudFormation<br/>
+                      - Amazon S3<br/>
                     </Popup>
                   </div>
-                  <div className='md:ml-2'><Button2><a href="https://www.younglings.academy" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
+                  <div className='md:ml-2'><Button2><a href="https://www.absa.co.za/personal/" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
                 </div>
               </div>
             </div>
@@ -249,24 +253,29 @@ const About = () => {
                 <FaUserTie />
               </div>
               <div>
-                <p className='text-lg md:text-[18px] font-semibold text-white'>Fullstack Web Developer</p>
-                <p className='text-white text-md md:text-[16px]'>Empire Partner Foundation</p>
-                <p className='text-[#906EF0]'>Oct 2023 - Jan 2024</p>
-                <p className="text-[#906EF0]">Remote</p>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Platform Storage Engineer</p>
+                <p className='text-white text-md md:text-[16px]'>ABSA Group</p>
+                <p className='text-[#906EF0]'>June 2024 - Present</p>
+                <p className="text-[#906EF0]">Johannesburg, Gauteng, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
                     <Popup>
                       Responsibilities:<br/><br/>
-                      - Crafted a robust fullstack web application collaboratively using HTML, CSS, JavaScript, AJAX, jQuery, Python, Django, and Bootstrap in a team of three developers.<br/>
-                      - Enhanced skills during tenure at Younglings Africa, gaining valuable experience at Empire Partner Foundation.<br/>
-                      - Conducted efficient daily standup meetings online.<br/>
-                      - Utilised Microsoft Planner and various other Microsoft tools for meticulous planning.<br/>
-                      - Prepared a User Stories Document outlining each component's functionality, appearance, and user experience.<br/>
-                      - Developed a comprehensive pitch deck and ERD diagram to streamline the development process.<br/>
-                      - Documentation significantly facilitated the two-sprint development phase over four weeks.<br/>
+                      - Designing and implementing storage systems.<br/>
+                      - Managing data backup and recovery processes.<br/>
+                      - Ensuring data integrity and security.<br/>
+                      - Conducting routine system checks.<br/>
+                      - Performance tuning for system optimisation.<br/>
+                      - Troubleshooting storage-related issues.<br/>
+                      - Managing both on-premises and cloud-based storage solutions.<br/>
+                      - Executing system upgrades.<br/>
+                      - Developing storage management procedures and standards.<br/>
+                      - Collaborating with other IT teams for integrated solutions.<br/>
+                      - Planning for disaster recovery.<br/>
+                      - Researching and implementing new storage technologies.<br/>
                     </Popup>
                   </div>
-                  <div className='md:ml-2'><Button2><a href="https://empirepartnerfoundation.org" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
+                  <div className='md:ml-2'><Button2><a href="https://www.absa.co.za/personal/" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
                 </div>
               </div>
             </div>
