@@ -215,6 +215,62 @@ const About = () => {
             </div>
           </div>
 
+          <div className="md:flex md:justify-between md:mx-10 md:mt-5">
+            {/* Work Experience 5 Details */}
+            <div className='flex mt-5 md:mt-0'>
+              <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
+                <FaUserTie />
+              </div>
+              <div>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer</p>
+                <p className='text-white text-md md:text-[16px]'>Younglings Africa</p>
+                <p className='text-[#906EF0]'>July 2023 - Present</p>
+                <p className="text-[#906EF0]">Cape Town, Western Cape, South Africa</p>
+                <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
+                  <div className='md:mr-2'>
+                    <Popup>
+                      Responsibilities:<br/><br/>
+                      - Developing and maintaining web applications using JavaScript, Tailwind CSS, MERN and other related technologies.<br/>
+                      - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.<br/>
+                      - Implementing responsive design and ensuring cross-browser compatibility.<br/>
+                      - Paticipate in Hackathons with other developers, and also joining staff team to facilitate ABSA Hackathons.<br/>
+                      - Participating in code reviews and providing constructive feedback to other developers.<br/>
+                      - Supporting the design and development of software programs under the guidance of senior developers.<br/>
+                    </Popup>
+                  </div>
+                  <div className='md:ml-2'><Button2><a href="https://www.younglings.academy" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Work Experience 6 Details */}
+            <div className='flex mt-5 md:mt-0'>
+              <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
+                <FaUserTie />
+              </div>
+              <div>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Fullstack Web Developer</p>
+                <p className='text-white text-md md:text-[16px]'>Empire Partner Foundation</p>
+                <p className='text-[#906EF0]'>Oct 2023 - Jan 2024</p>
+                <p className="text-[#906EF0]">Remote</p>
+                <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
+                  <div className='md:mr-2'>
+                    <Popup>
+                      Responsibilities:<br/><br/>
+                      - Crafted a robust fullstack web application collaboratively using HTML, CSS, JavaScript, AJAX, jQuery, Python, Django, and Bootstrap in a team of three developers.<br/>
+                      - Enhanced skills during tenure at Younglings Africa, gaining valuable experience at Empire Partner Foundation.<br/>
+                      - Conducted efficient daily standup meetings online.<br/>
+                      - Utilised Microsoft Planner and various other Microsoft tools for meticulous planning.<br/>
+                      - Prepared a User Stories Document outlining each component's functionality, appearance, and user experience.<br/>
+                      - Developed a comprehensive pitch deck and ERD diagram to streamline the development process.<br/>
+                      - Documentation significantly facilitated the two-sprint development phase over four weeks.<br/>
+                    </Popup>
+                  </div>
+                  <div className='md:ml-2'><Button2><a href="https://empirepartnerfoundation.org" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className='md:mx-10'>
             
           </div>
