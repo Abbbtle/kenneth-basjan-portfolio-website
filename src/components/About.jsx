@@ -7,7 +7,7 @@ import Button2 from './Button2';
 import Popup from './Popup';
 import Weberu from './Weberu';
 import '../index.css';
-import soon from '../assets/Images/coming-soon.gif';
+import comingSoonGif from '../assets/Images/coming-soon.gif';
 
 const About = () => {
   return (
@@ -125,7 +125,7 @@ const About = () => {
                   </div>
                   <div className='md:mr-2'>
                     <Weberu>
-                      <img src= {soon} alt="Weberu-Coming-Soon" className='rounded-3xl' />
+                      <img src= {comingSoonGif} alt="Weberu-Coming-Soon" className='rounded-3xl' />
                     </Weberu>
                   </div>
                 </div>
