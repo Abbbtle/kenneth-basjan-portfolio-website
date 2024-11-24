@@ -3,7 +3,6 @@ import HorizontalRule from "./HorizontalRule";
 import HorizontalRule2 from "./HorizontalRule2";
 import Button1 from "./Button1";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,9 +16,6 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  
-  // reCAPTCHA Site Key
-  const recaptchaKey = process.env.RECAPTCHA_SITE_KEY;
 
   // Validation
   const [errors, setErrors] = useState({
@@ -61,8 +57,6 @@ const Contact = () => {
     return isValid;
   };
 
-  const recaptchaRef = useRef();
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -97,7 +91,7 @@ const Contact = () => {
     className:"font-medium text-md md:mx-0"
     });
 
-  const reCAPTCHA_error = () => toast.error("Please complete the reCAPTCHA challenge and fill in all required fields.", {
+  const reCAPTCHA_error = () => toast.error("Please fill in all required fields.", {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -114,48 +108,42 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
   
-    // reCAPTCHA validation
-    if (validateForm() && recaptchaRef.current.getValue()) {
-      const token = recaptchaRef.current.getValue();
-      
+    // reCAPTCHA validation is removed, so we don't need the token
+    if (validateForm()) {
+      console.log("Form submitted:", formData);
+  
       try {
-        // Send the token to your backend for verification
-        const response = await axios.post('http://localhost:5000/api/recaptcha', { token });
-        
-        if (response.data.success) {
-          // If successful, send email with EmailJS
-          emailjs
-            .sendForm(
-              "service_0y90kmk",
-              "template_hf61l0d",
-              formRef.current,
-              "czPlhKpgkHGDhO1RW"
-            )
-            .then(() => {
-              setLoading(false);
-              success();
-              setFormData({ name: "", email: "", company: "", message: "" });
-            })
-            .catch((error) => {
-              setLoading(false);
-              console.error(error);
-              fields_error();
+        emailjs
+          .sendForm(
+            "service_5dgfj9n",
+            "template_8281rug",
+            formRef.current,
+            "0WspAd3cLvGg9o1Q5"//czPlhKpgkHGDhO1RW
+          )
+          .then(() => {
+            setLoading(false);
+            success();
+            setFormData({
+              name: "",
+              email: "",
+              company: "",
+              message: "",
             });
-        } else {
-          setLoading(false);
-          reCAPTCHA_error();
-        }
-        } catch (error) {
-          setLoading(false);
-          console.error('Error verifying reCAPTCHA:', error);
-          reCAPTCHA_error();
-        }
-      } else {
+          })
+          .catch((error) => {
+            setLoading(false);
+            console.error(error);
+            fields_error();
+          });
+      } catch (error) {
+        console.error("Server verification failed", error);
         setLoading(false);
-        reCAPTCHA_error();
       }
-    };
-
+    } else {
+      setLoading(false);
+      reCAPTCHA_error();
+    }
+  };  
 
   return (
     <div name="contact">
@@ -238,9 +226,9 @@ const Contact = () => {
           </div>
 
           {/* Message Textarea */}
-          <div className="ml-4 md:ml-8 mt-10">
+          <div className="mt-10 mx-4 md:mx-9">
             <textarea
-              className="appearance-none rounded text-white bg-[#0D0D0D] w-[96%] md:w-[97%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none rounded text-white bg-[#0D0D0D] w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               id="message"
               name="message"
               value={formData.message}
@@ -253,19 +241,17 @@ const Contact = () => {
             )}
           </div>
 
-          
           {/* submit Button */}
-          <div className="flex flex-col md:flex-row justify-between md:items-center text-right mt-5 md:mr-12 mb-5">
-            {/* Add reCAPTCHA */}
-            <div className="mx-auto md:ml-8">
+          <div className="flex justify-end mt-5 mb-5">
+            {/* reCAPTCHA is commented out */}
+            {/* <div className="mx-auto md:ml-8">
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={recaptchaKey}
-                onChange={() => {
-                }}
+                onChange={() => {}}
               />
-            </div>
-            <div className="mx-auto md:mx-0 mt-5 md:mt-0">
+            </div> */}
+            <div className="mr-10 mt-5 md:mt-0">
               <Button1 onClick={handleSubmit}>
                 {loading ? "Sending..." : "Send"}
               </Button1>

@@ -3,29 +3,31 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 
 const app = express();
-const PORT = 5000;
-
-// Replace with your new reCAPTCHA Secret Key
-const RECAPTCHA_SECRET_KEY = '6LfF3IcqAAAAAGUg3kk6l4Sc_XMQGj6tWQw6xqcU';
+const PORT = 5000; // Or any port you prefer
 
 app.use(bodyParser.json());
 
-app.post('/api/recaptcha', async (req, res) => {
+// Your secret key
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+
+app.post('/api/verify-recaptcha', async (req, res) => {
   const { token } = req.body;
 
   try {
+    // Send request to Google's verification endpoint
     const response = await axios.post(
       `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${token}`
     );
 
-    const { success } = response.data;
-    if (success) {
-      res.json({ success: true, message: 'Verification successful' });
+    const data = response.data;
+    
+    if (data.success) {
+      res.json({ success: true });
     } else {
-      res.json({ success: false, message: 'Verification failed' });
+      res.json({ success: false, errors: data['error-codes'] });
     }
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Server error' });
+    res.status(500).json({ error: 'Verification failed.' });
   }
 });
 
