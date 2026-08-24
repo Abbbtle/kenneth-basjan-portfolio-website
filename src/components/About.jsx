@@ -1,5 +1,5 @@
 import React from 'react';
-import kenneth1 from '../assets/Images/Kenneth/kenneth-younglings.png';
+import kenneth1 from '../assets/Images/Kenneth/kenneth-2-cropped.jpg';
 import { LuGraduationCap } from 'react-icons/lu';
 import { FaUserTie } from 'react-icons/fa';
 import TechStack from './TechStack';
@@ -14,19 +14,29 @@ const About = () => {
     <div name='about' className='bg-white mx-5 md:mx-10 mt-10 pb-10 pt-1 rounded-3xl shadow-inner shadow-black'>
       <div className='mx-2 md:mx-10 mt-10'>
 
-        <h2 className='text-center md:text-left text-4xl md:text-5xl font-bold text-black'>Meet Kenneth Basjan</h2>
-        <h4 className='text-center md:text-left text-2xl md:text-3xl font-bold text-[#4E30A5]'>Your Web Development Partner</h4>
+        <h2 className='text-center md:text-left text-4xl md:text-5xl font-bold text-black'>Kenneth Basjan</h2>
+        <h4 className='text-center md:text-left text-xl md:text-2xl font-bold text-[#4E30A5]'>Software Development Engineer | NTT DATA</h4>
 
         <div className='md:flex mt-5 md:mt-10 items-center'>
 
           <img data-aos="zoom-in" data-aos-duration="1500" src={kenneth1} alt="Kenneth Basjan" className='mb-5 mx-auto sm:w-60 md:w-80 h-auto object-contain rounded-3xl' />
 
-          <p className='text-black font-medium sm:text-center sm:text-[18px] mx-2 md:text-left md:ml-11 text-lg md:text-[20px]'>
+          {/* <p className='text-black font-medium sm:text-center sm:text-[18px] mx-2 md:text-left md:ml-11 text-lg md:text-[20px]'>
             I have always been captivated by the <span className='text-[#4E30A5]'>boundless possibilities</span> that the digital world offers. 
             With <span className='text-[#4E30A5]'>experience</span> as a <span className='text-[#4E30A5]'>MERN Stack web developer</span>, I have honed my skills to create websites that 
             marry <span className='text-[#4E30A5]'>stunning design</span> with <span className='text-[#4E30A5]'>robust functionality</span>. From concept to execution, I thrive on transforming 
             your visions into reality. My relentless pursuit of <span className='text-[#4E30A5]'>innovation and passion</span> for crafting <span className='text-[#4E30A5]'>exceptional online experiences </span> 
             drive me to stay at the <span className='text-[#4E30A5]'>forefront</span> of the <span className='text-[#4E30A5]'>ever-evolving</span> web development landscape.
+          </p> */}
+
+          <p className='text-black font-medium sm:text-center sm:text-[18px] mx-2 md:text-left md:ml-11 text-lg md:text-[19px]'>
+              <span className='text-[#4E30A5]'>Software Development Engineer</span> at <span className='text-[#4E30A5]'>NTT DATA</span> specialising in <span className='text-[#4E30A5]'>AWS</span> and 
+              <span className='text-[#4E30A5]'> cloud-native</span> development. I transitioned from <span className='text-[#4E30A5]'>enterprise infrastructure engineering</span>, bringing a strong 
+              foundation in <span className='text-[#4E30A5]'>storage</span>, <span className='text-[#4E30A5]'>backup</span>, <span className='text-[#4E30A5]'>disaster recovery</span>, and <span className='text-[#4E30A5]'>platform operations</span> into <span className='text-[#4E30A5]'>software development</span>. I enjoy 
+              building <span className='text-[#4E30A5]'>scalable applications</span>, <span className='text-[#4E30A5]'>automating processes</span>, and <span className='text-[#4E30A5]'>designing reliable 
+                cloud solutions</span> using <span className='text-[#4E30A5]'>modern engineering practices</span>. Passionate about <span className='text-[#4E30A5]'>AWS</span>, 
+                <span className='text-[#4E30A5]'>backend development</span>, <span className='text-[#4E30A5]'>DevOps</span>, and <span className='text-[#4E30A5]'>new technologies</span> to solve 
+                <span className='text-[#4E30A5]'>real world problems</span>.
           </p>
 
         </div>
