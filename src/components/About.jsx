@@ -150,7 +150,7 @@ const About = () => {
               <div>
                 <p className='text-lg md:text-[18px] font-semibold text-white'>Junior Software Developer Intern</p>
                 <p className='text-white text-md md:text-[16px]'>UVU Africa - Capaciti Division</p>
-                <p className='text-[#906EF0]'>Jan 2023 - July 2023</p>
+                <p className='text-[#906EF0]'>Jan 2023 - May 2024</p>
                 <p className="text-[#906EF0]">Cape Town, Western Cape, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
@@ -166,11 +166,9 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="md:flex md:justify-between md:mx-10 md:mt-5">
             {/* Work Experience 3 Details */}
-            <div className='flex mt-5 md:mt-0'>
+            {/* <div className='flex mt-5 md:mt-0'>
               <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
                 <FaUserTie />
               </div>
@@ -194,7 +192,7 @@ const About = () => {
                   <div className='md:ml-2'><Button2><a href="https://www.younglings.academy" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Work Experience 4 Details */}
             <div className='flex mt-5 md:mt-0'>
@@ -226,6 +224,8 @@ const About = () => {
           </div>
 
           <div className="md:flex md:justify-between md:mx-10 md:mt-5">
+            
+
             {/* Work Experience 5 Details */}
             <div className='flex mt-5 md:mt-0'>
               <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
@@ -265,7 +265,7 @@ const About = () => {
               <div>
                 <p className='text-lg md:text-[18px] font-semibold text-white'>Platform Storage Engineer</p>
                 <p className='text-white text-md md:text-[16px]'>ABSA Group</p>
-                <p className='text-[#906EF0]'>June 2024 - Present</p>
+                <p className='text-[#906EF0]'>June 2024 - July 2026</p>
                 <p className="text-[#906EF0]">Johannesburg, Gauteng, South Africa</p>
                 <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
                   <div className='md:mr-2'>
@@ -289,7 +289,40 @@ const About = () => {
                 </div>
               </div>
             </div>
+
+            {/* Work Experience 7 Details */}
+            <div className='flex mt-5 md:mt-0'>
+              <div className='text-center md:text-left mt-1 mr-2 md:mr-5 text-lg md:text-[25px] text-white'>
+                <FaUserTie />
+              </div>
+              <div>
+                <p className='text-lg md:text-[18px] font-semibold text-white'>Platform Storage Engineer</p>
+                <p className='text-white text-md md:text-[16px]'>ABSA Group</p>
+                <p className='text-[#906EF0]'>August 2026 - Present</p>
+                <p className="text-[#906EF0]">Johannesburg, Gauteng, South Africa</p>
+                <div className='flex flex-col space-y-2 mt-2 md:flex-row md:space-y-0'>
+                  <div className='md:mr-2'>
+                    <Popup>
+                      Responsibilities:<br/><br/>
+                      - Develop cloud-native applications on AWS.<br/>
+                      - Implement cloud security best practices.<br/>
+                      - Troubleshoot and resolve production issues.<br/>
+                      - Collaborate with cross-functional teams.<br/>
+                      - Participate in code reviews and technical design.<br/>
+                      - Support cloud migrations and modernization initiatives.<br/>
+                      - Build event-driven and serverless solutions.<br/>
+                      - Monitor application performance and availability.<br/>
+                    </Popup>
+                  </div>
+                  <div className='md:ml-2'><Button2><a href="https://www.absa.co.za/personal/" target='_blank' rel="noopener noreferrer">Go To Website</a></Button2></div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* <div className="md:flex md:justify-between md:mx-10 md:mt-5">
+            
+          </div> */}
           <div className='md:mx-10'>
             
           </div>
