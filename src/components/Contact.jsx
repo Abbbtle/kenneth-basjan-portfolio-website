@@ -1,265 +1,222 @@
-import React, { useRef, useState } from "react";
-import HorizontalRule from "./HorizontalRule";
-import HorizontalRule2 from "./HorizontalRule2";
-import Button1 from "./Button1";
-import emailjs from "@emailjs/browser";
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from '../config/contact';
+import { profile } from '../data/profile';
+import Button from './Button';
+import SectionHeading from './SectionHeading';
+
+// `website` is a honeypot: hidden from people, but bots tend to fill in every field.
+const EMPTY_FORM = { name: '', email: '', company: '', message: '', website: '' };
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const LINE_FIELDS = [
+  { name: 'name', label: 'Name', type: 'text', autoComplete: 'name', maxLength: 100 },
+  { name: 'email', label: 'Email', type: 'email', autoComplete: 'email', maxLength: 254 },
+  {
+    name: 'company',
+    label: 'Company',
+    type: 'text',
+    autoComplete: 'organization',
+    maxLength: 100,
+    optional: true,
+  },
+];
+
+const VALIDATORS = {
+  name: (value) => (value.trim() ? '' : 'Enter your name.'),
+  email: (value) => {
+    if (!value.trim()) return 'Enter your email address so I can reply.';
+    return EMAIL_PATTERN.test(value.trim()) ? '' : 'Enter an email address like name@example.com.';
+  },
+  message: (value) => (value.trim() ? '' : 'Write a message.'),
+};
+
+// Toast messages. Fixed ids stop repeated clicks from stacking duplicates.
+const notifySent = () =>
+  toast.success('Thanks for your message. I’ll get back to you as soon as possible.', {
+    toastId: 'contact-sent',
+  });
+const notifyFailed = () =>
+  toast.error('Your message wasn’t sent. Check your connection and try again, or message me on LinkedIn.', {
+    toastId: 'contact-failed',
+  });
+const notifyInvalid = () =>
+  toast.error('Please fill in the required fields.', { toastId: 'contact-invalid' });
+
+const validate = (values) =>
+  Object.fromEntries(Object.entries(VALIDATORS).map(([name, check]) => [name, check(values[name])]));
+
+const ErrorText = ({ id, children }) => (
+  <p id={id} aria-live="polite" className="text-sm text-[#FF9C9C] empty:hidden">
+    {children}
+  </p>
+);
 
 const Contact = () => {
-  const formRef = useRef();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
+  const [values, setValues] = useState(EMPTY_FORM);
+  const [errors, setErrors] = useState({});
+  const [sending, setSending] = useState(false);
 
-  const [loading, setLoading] = useState(false);
-
-  // Validation
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const validateForm = () => {
-    let isValid = true;
-    const newErrors = { ...errors };
-
-    if (!formData.name) {
-      newErrors.name = "Please enter your name";
-      isValid = false;
-    } else {
-      newErrors.name = "";
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setValues((previous) => ({ ...previous, [name]: value }));
+    // Clear an error as soon as the field becomes valid.
+    if (errors[name] && !VALIDATORS[name]?.(value)) {
+      setErrors((previous) => ({ ...previous, [name]: '' }));
     }
-
-    if (!formData.email) {
-      newErrors.email = "Please enter your email address";
-      isValid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Invalid email format";
-      isValid = false;
-    } else {
-      newErrors.email = "";
-    }
-
-    if (!formData.message) {
-      newErrors.message = "Message is required";
-      isValid = false;
-    } else {
-      newErrors.message = "";
-    }
-
-    setErrors(newErrors);
-    return isValid;
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((formData) => ({
-      ...formData,
-      [name]: value,
-    }));
+  const handleBlur = (event) => {
+    const { name, value } = event.target;
+    if (VALIDATORS[name] && value) {
+      setErrors((previous) => ({ ...previous, [name]: VALIDATORS[name](value) }));
+    }
   };
 
-  // Toast Notification Functions
-  const success = () => toast.success("Thank you. I will get back to you as soon as possible.", {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
-    className:"font-medium text-md md:mx-0"
-    });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (sending) return;
 
-  const fields_error = () => toast.error("Ahh, something went wrong. Please try again.", {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
-    className:"font-medium text-md md:mx-0"
-    });
-
-  const reCAPTCHA_error = () => toast.error("Please fill in all required fields.", {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
-    className:"font-medium text-md mx-6 md:mx-0"
-    });
-
-  // EmailJS
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-  
-    // reCAPTCHA validation is removed, so we don't need the token
-    if (validateForm()) {
-      console.log("Form submitted:", formData);
-  
-      try {
-        emailjs
-          .sendForm(
-            "service_5dgfj9n",
-            "template_8281rug",
-            formRef.current,
-            "0WspAd3cLvGg9o1Q5"//czPlhKpgkHGDhO1RW
-          )
-          .then(() => {
-            setLoading(false);
-            success();
-            setFormData({
-              name: "",
-              email: "",
-              company: "",
-              message: "",
-            });
-          })
-          .catch((error) => {
-            setLoading(false);
-            console.error(error);
-            fields_error();
-          });
-      } catch (error) {
-        console.error("Server verification failed", error);
-        setLoading(false);
-      }
-    } else {
-      setLoading(false);
-      reCAPTCHA_error();
+    const nextErrors = validate(values);
+    setErrors(nextErrors);
+    const firstInvalid = Object.keys(nextErrors).find((name) => nextErrors[name]);
+    if (firstInvalid) {
+      notifyInvalid();
+      document.getElementById(`contact-${firstInvalid}`)?.focus();
+      return;
     }
-  };  
+
+    const { website, ...templateParams } = values;
+    if (website) {
+      setValues(EMPTY_FORM);
+      notifySent();
+      return;
+    }
+
+    setSending(true);
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+        blockHeadless: true,
+        limitRate: { id: 'contact-form', throttle: 10000 },
+      });
+      setValues(EMPTY_FORM);
+      setErrors({});
+      notifySent();
+    } catch (error) {
+      console.error('Contact form failed to send', error);
+      notifyFailed();
+    } finally {
+      setSending(false);
+    }
+  };
+
+  const fieldProps = (name) => ({
+    id: `contact-${name}`,
+    name,
+    value: values[name],
+    onChange: handleChange,
+    onBlur: handleBlur,
+    required: name in VALIDATORS,
+    'aria-invalid': errors[name] ? 'true' : undefined,
+    'aria-describedby': `contact-${name}-error`,
+  });
 
   return (
-    <div name="contact">
-      {/* Contact Heading */}
-      <h2 className="text-5xl md:text-[72px] font-bold text-white mt-20 md:mt-40 uppercase text-center">
-        Let's start <span className="text-[#906EF0]">building</span> your
-        <span className="text-[#906EF0]"> vision</span>
-        <div className="mx-2 md:mx-14 mt-[-15px]">
-          <HorizontalRule />
+    <section id="contact" aria-labelledby="contact-heading" className="page">
+      <SectionHeading id="contact-heading" first="Let’s" second="talk" />
+
+      <div className="mt-12 grid gap-12 md:mt-16 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-4">
+          <p className="text-xl font-light leading-snug md:text-2xl">
+            Hiring for a cloud or backend role, or want to talk about a project? Send me a message and I’ll
+            reply by email.
+          </p>
+          <p className="mt-6 text-muted">
+            You can also find me on{' '}
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-line text-white"
+            >
+              LinkedIn
+            </a>
+            .
+          </p>
         </div>
-      </h2>
 
-      {/* Contact Form */}
-      <div 
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        className="border-solid bg-[#181818] border-[#808080] border-[1px] rounded-3xl mx-4 md:mx-16 mt-16 shadow-2xl shadow-black">
-        <h4 className="text-center mt-3">New Message</h4>
-
+        {/* The original site's "New message" compose window. */}
         <form
-          ref={formRef}
-          className="rounded-3xl"
+          noValidate
           onSubmit={handleSubmit}
+          aria-busy={sending}
+          className="relative rounded-3xl border border-white/20 bg-raised lg:col-span-8"
         >
-          {/* Name Field */}
-          <div className="ml-9 mt-10">
-            <label htmlFor="name">Name: </label>
-            <input
-              className="appearance-none rounded ml-0 md:ml-3 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter name"
-            />
-            {errors.name && (
-              <p className="text-red-500 text-xs">{errors.name}</p>
-            )}
-          </div>
-          <div className="mx-7 md:mx-9 mt-[-15px]">
-            <HorizontalRule2 />
-          </div>
+          <p className="border-b border-white/20 px-6 py-4 text-center text-sm text-muted md:px-8">
+            New message
+          </p>
 
-          {/* Email Field */}
-          <div className="ml-9 mt-10">
-            <label htmlFor="email">Email: </label>
-            <input
-              className="appearance-none rounded md:ml-4 bg-transparent w-[70%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter email address"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-xs">{errors.email}</p>
-            )}
-          </div>
-          <div className="mx-7 md:mx-9 mt-[-15px]">
-            <HorizontalRule2 />
-          </div>
-
-          {/* Company Field */}
-          <div className="ml-9 mt-10">
-            <label htmlFor="company">Company: </label>
-            <input
-              className="appearance-none rounded bg-transparent w-[60%] md:w-[90%] py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-              placeholder="Enter Company"
-            />
-          </div>
-          <div className="mx-7 md:mx-9 mt-[-15px]">
-            <HorizontalRule2 />
-          </div>
-
-          {/* Message Textarea */}
-          <div className="mt-10 mx-4 md:mx-9">
-            <textarea
-              className="appearance-none rounded text-white bg-[#0D0D0D] w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Write your message here"
-              rows="15"
-            />
-            {errors.message && (
-              <p className="text-red-500 text-xs">{errors.message}</p>
-            )}
-          </div>
-
-          {/* submit Button */}
-          <div className="flex justify-end mt-5 mb-5">
-            {/* reCAPTCHA is commented out */}
-            {/* <div className="mx-auto md:ml-8">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={recaptchaKey}
-                onChange={() => {}}
-              />
-            </div> */}
-            <div className="mr-10 mt-5 md:mt-0">
-              <Button1 onClick={handleSubmit}>
-                {loading ? "Sending..." : "Send"}
-              </Button1>
+          {LINE_FIELDS.map((field) => (
+            <div
+              key={field.name}
+              className="border-b border-white/20 px-6 transition-shadow focus-within:shadow-[inset_0_-2px_0_0_#906EF0] md:px-8"
+            >
+              <div className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:gap-4">
+                <label htmlFor={`contact-${field.name}`} className="shrink-0 text-muted sm:w-28">
+                  {field.label}
+                  {field.optional && <span className="sr-only"> (optional)</span>}
+                </label>
+                <input
+                  {...fieldProps(field.name)}
+                  type={field.type}
+                  autoComplete={field.autoComplete}
+                  maxLength={field.maxLength}
+                  placeholder={field.optional ? 'Optional' : undefined}
+                  className="w-full bg-transparent text-lg text-white placeholder:text-white/40 focus:outline-none"
+                />
+              </div>
+              <div className="pb-3 empty:hidden sm:pl-32">
+                <ErrorText id={`contact-${field.name}-error`}>{errors[field.name]}</ErrorText>
+              </div>
             </div>
+          ))}
+
+          <div className="px-6 pt-6 md:px-8">
+            <label htmlFor="contact-message" className="text-muted">
+              Message
+            </label>
+            <textarea
+              {...fieldProps('message')}
+              rows={8}
+              maxLength={5000}
+              className="mt-3 w-full rounded-xl border border-white/20 bg-sunken p-4 text-white focus:border-accent focus:outline-none"
+            />
+            <ErrorText id="contact-message-error">{errors.message}</ErrorText>
+          </div>
+
+          <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+            <label htmlFor="contact-website">Leave this field empty</label>
+            <input
+              id="contact-website"
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={values.website}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="flex justify-end px-6 py-6 md:px-8">
+            <Button type="submit" variant="solid" disabled={sending}>
+              {sending ? 'Sending…' : 'Send message'}
+            </Button>
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

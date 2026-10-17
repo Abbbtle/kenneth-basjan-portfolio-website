@@ -1,54 +1,67 @@
-import React from 'react'
-import {logo} from '../assets';
-import FLine from './FLine';
-import {FaLinkedin} from 'react-icons/fa';
-import {FaGithub} from 'react-icons/fa';
-import {BsWhatsapp} from 'react-icons/bs';
-import { Link } from 'react-scroll';
+import logo from '../assets/images/logo.webp';
+import { navLinks } from '../data/navigation';
+import { profile } from '../data/profile';
 
-const Footer = () => {
-  return(
-    <div>
-      {/* horizontal footer line */}
-      <div className='mt-40'>
-        <FLine/>
+const SOCIALS = [
+  { label: 'LinkedIn', href: profile.socials.linkedin },
+  { label: 'GitHub', href: profile.socials.github },
+  { label: 'WhatsApp', href: profile.socials.whatsapp },
+  profile.email && { label: 'Email', href: `mailto:${profile.email}` },
+].filter(Boolean);
+
+// The original footer layout: large logo, then Socials and Links columns.
+const Footer = () => (
+  <footer className="page mt-32 border-t border-white/15 pb-10 pt-16 md:mt-48">
+    <div className="grid gap-12 md:grid-cols-12">
+      <a href="#top" aria-label="Kenneth Basjan, back to top" className="w-fit md:col-span-6">
+        <img
+          src={logo}
+          alt=""
+          width={480}
+          height={479}
+          loading="lazy"
+          className="h-32 w-32 md:h-44 md:w-44"
+        />
+      </a>
+
+      <div className="md:col-span-3">
+        <h2 className="text-sm text-muted">Socials</h2>
+        <ul className="mt-4 space-y-2 text-lg">
+          {SOCIALS.map(({ label, href }) => (
+            <li key={label}>
+              <a
+                href={href}
+                {...(href.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                className="hover-line"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <div className=' md:mx-40 mt-10 flex flex-col md:flex-row items-center md:items-start justify-between '>
-        {/* Logo */}
-        <div className="logo">
-          <img src={logo} alt='logo' className='w-60 md:w-80 h-auto object-contain' />
-        </div>
-
-        <div className='md:flex'>
-          {/* Socials */}
-          <div className='md:mr-20'>
-            <h4 className='uppercase font-medium text-center text-[22px] mt-5 text-white'>Socials</h4>
-            <div className='text-3xl mt-3 flex items-center md:flex-col md:space-y-7 space-x-10 md:space-x-0'>
-              <a href='https://www.linkedin.com/in/kenneth-basjan/' target='_blank' rel='noopener noreferrer'><FaLinkedin className='text-[#A1A1A1] hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/></a>
-              <a href='https://github.com/Abbbtle' target='_blank' rel='noopener noreferrer'><FaGithub className='text-[#A1A1A1] hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/></a>
-              <a href='https://wa.link/6fokxr' target='_blank' rel='noopener noreferrer'><BsWhatsapp className='text-[#A1A1A1] hover:text-[#906EF0] hover:animate-pulse cursor-pointer'/></a>
-            </div>
-          </div>
-          {/* Links */}
-          <div className='md:ml-20'>
-          <h4 className='uppercase font-medium text-[22px] mt-5 text-white text-center'>Links</h4>
-            <ul className='text-center text-[20px] font-medium uppercase'>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1 mt-1'><Link to='about' smooth={true} duration={2000} className='text-[#A1A1A1] cursor-pointer'>About</Link></li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='services' smooth={true} duration={1800} className='text-[#A1A1A1] cursor-pointer'>Services</Link></li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='work' smooth={true} duration={1400} className='text-[#A1A1A1] cursor-pointer'>Work</Link></li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='testimonials' smooth={true} duration={1200} className='text-[#A1A1A1] cursor-pointer'>Testimonials</Link></li>
-              <li className='hover:text-[#906EF0] hover:animate-pulse cursor-pointer mb-1'><Link to='contact' smooth={true} duration={1000} className='text-[#A1A1A1] cursor-pointer'>Contact</Link></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className='text-[#808080] text-center mt-20 mb-10'>
-        <p>© 2024 Kenneth Basjan. All Rights Reserved.</p>
-      </div>
+      <nav aria-label="Footer" className="md:col-span-3">
+        <h2 className="text-sm text-muted">Links</h2>
+        <ul className="mt-4 space-y-2 text-lg">
+          {navLinks.map(({ id, label }) => (
+            <li key={id}>
+              <a href={`#${id}`} className="hover-line">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
-  );
-};
 
-export default Footer
+    <div className="mt-16 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-muted sm:flex-row sm:justify-between">
+      <p>© {new Date().getFullYear()} Kenneth Basjan. All rights reserved.</p>
+      <a href="#top" className="hover-line w-fit">
+        Back to top
+      </a>
+    </div>
+  </footer>
+);
+
+export default Footer;

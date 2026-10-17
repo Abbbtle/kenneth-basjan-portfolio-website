@@ -1,42 +1,31 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
-
-    animation: {
-      marquee: 'marquee 300s linear infinite',
-    },
-    keyframes: {
-      marquee: {
-        '0%': { transform: 'translateX(0%)' },
-        '100%': { transform: 'translateX(-2500%)' },
+    extend: {
+      colors: {
+        // The original site's charcoal, cards and purple.
+        charcoal: '#1E1E1E',
+        raised: '#181818',
+        sunken: '#0D0D0D',
+        accent: {
+          DEFAULT: '#906EF0',
+          // Filled backgrounds behind white text (5.2:1).
+          fill: '#7350E6',
+          // Purple text on the white About panel (9:1).
+          strong: '#4E30A5',
+        },
+        muted: '#B3B3B3',
       },
-      marquee2: {
-        '0%': { transform: 'translateX(100%)' },
-        '100%': { transform: 'translateX(0%)' },
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+      maxWidth: {
+        page: '90rem',
       },
     },
-
-    screens: {
-      'sm': '320px',
-      // => @media (min-width: 320px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    },
-
-    extend: {},
   },
   plugins: [],
-}
+};

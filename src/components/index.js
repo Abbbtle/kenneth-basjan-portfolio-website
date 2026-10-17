@@ -1,30 +1,12 @@
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import About from "./About";
-import Services from "./Services";
-import Work from "./Work";
-import Info from "./Info";
-import Flow from "./Flow";
-import Testimonials from "./Testimonials";
-import ScrollingText from "./ScrollingText";
-import Contact from "./Contact";
-import Footer from "./Footer";
-import CustomCursor from "./CustomCursor";
-import ScrollToTopButton from "./ScrollToTopButton";
-import "../index.css"
-
-export {
-    Navbar,
-    Hero,
-    About,
-    Services,
-    Work,
-    Info,
-    Flow,
-    Testimonials,
-    ScrollingText,
-    Contact,
-    Footer,
-    CustomCursor,
-    ScrollToTopButton
-}
+export { default as About } from './About';
+export { default as Contact } from './Contact';
+export { default as CustomCursor } from './CustomCursor';
+export { default as Experience } from './Experience';
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export { default as Hero } from './Hero';
+export { default as Marquee } from './Marquee';
+export { default as Projects } from './Projects';
+export { default as Recommendations } from './Recommendations';
+export { default as ScrollToTopButton } from './ScrollToTopButton';
+export { default as Skills } from './Skills';

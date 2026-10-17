@@ -1,41 +1,50 @@
-# kenneth-basjan-portfolio-website
+# Kenneth Basjan — Portfolio
 
-Dependencies:
+Personal portfolio of Kenneth Basjan, Software Development Engineer (AWS & cloud-native).
 
-Install Node on your computer (Use the stable version):
-https://nodejs.org/en
+**Live site:** https://kenneth-basjan.web.app
 
-or
+## Stack
 
-(In your cmd / terminal)
-npm i node
+- [React 18](https://react.dev) + [Vite](https://vite.dev)
+- [Tailwind CSS 3](https://v3.tailwindcss.com)
+- [EmailJS](https://www.emailjs.com) for the contact form
+- [Firebase Hosting](https://firebase.google.com/docs/hosting), deployed with GitHub Actions
 
-Vite:
-npm create vite@latest
+## Getting started
 
-Tailwind CSS:
-npx create-react-app my-project
-cd my-project
-npm install -D tailwindcss
-npx tailwindcss init
+Requires Node.js 22 (or 20.19+).
 
-AOS (Scrolling Animations):
-npm install aos --save
+```bash
+npm ci            # install dependencies
+npm run dev       # start the dev server at http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the production build locally
+npm run lint      # ESLint (fails on any warning)
+npm run format    # format everything with Prettier
+```
 
-React Icons:
-npm install react-icons --save
+No environment variables are needed. The EmailJS IDs in `src/config/contact.js` are public identifiers by design.
 
-Emailjs:
-npm install @emailjs/browser --save
+## Editing content
 
-Google reCAPTCHA:
-npm install react-google-recaptcha
+Most content lives in plain data files, so updating the site rarely means touching components:
 
-React Router Dom:
-npm i react-router-dom
+| What                    | Where                         |
+| ----------------------- | ----------------------------- |
+| Name, role, CV, socials | `src/data/profile.js`         |
+| Experience & education  | `src/data/experience.js`      |
+| Skills                  | `src/data/skills.js`          |
+| Projects                | `src/data/projects.js`        |
+| Recommendations         | `src/data/recommendations.js` |
+| Navigation              | `src/data/navigation.js`      |
+| SEO & link previews     | `index.html`, `public/`       |
 
-React Scroll:
-npm i react-scroll
+Images live in `src/assets/images` as WebP. Keep new images small: resize to at most twice their displayed size before adding them.
 
-Toastify:
-npm i react-toastify
+## Deployment
+
+- **Push to `main`:** GitHub Actions builds the site and deploys it to the live Firebase Hosting channel (`.github/workflows/firebase-hosting-merge.yml`).
+- **Pull requests:** lint, format check and build run, then a preview channel is deployed and linked on the PR.
+
+Hosting headers (caching and security) are configured in `firebase.json`.

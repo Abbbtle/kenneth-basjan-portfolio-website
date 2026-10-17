@@ -1,186 +1,198 @@
-/*========== Tailwind CSS ===========*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";  
-@import "tailwindcss/utilities";
-
-/*========== General CSS ===========*/
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1E1E1E;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #906EF0;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #1E1E1E;
-    background-color: rgba(255, 255, 255, 0.87);
+    color-scheme: dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
   }
-  a:hover {
-    color: #906EF0;
+
+  html {
+    @apply bg-charcoal;
   }
-  button {
-    background-color: #1E1E1E;
+
+  body {
+    @apply bg-charcoal font-sans text-white;
+    min-width: 320px;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    @apply bg-accent-fill text-white;
+  }
+
+  /* Toasts (react-toastify): charcoal card, Poppins, purple progress bar, below the fixed header.
+     react-toastify injects its own :root variables at runtime, after this stylesheet, so this
+     block uses :root:root to win on specificity rather than load order. */
+  :root:root {
+    --toastify-font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --toastify-color-dark: #181818;
+    --toastify-text-color-dark: #ffffff;
+    --toastify-color-success: #906ef0;
+    --toastify-color-error: #ff9c9c;
+    --toastify-color-progress-dark: #906ef0;
+    --toastify-color-progress-success: #906ef0;
+    --toastify-color-progress-error: #ff9c9c;
+    --toastify-toast-bd-radius: 14px;
+    --toastify-toast-top: 5.5rem;
+  }
+
+  .Toastify__toast-theme--dark {
+    border: 1px solid rgb(255 255 255 / 0.15);
   }
 }
 
-/*========== Buttons ===========*/
-button {
-  border-radius: 10px;
-  border: 3px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1E1E1E;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #906EF0;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@layer components {
+  .page {
+    @apply mx-auto w-full max-w-page px-5 md:px-10;
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-[60] -translate-y-24 rounded-md bg-accent-fill px-4 py-2 font-medium text-white transition-transform focus:translate-y-0;
+  }
+
+  /* Underline that draws in from the left on hover, used for text links. */
+  .hover-line {
+    background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 0 1px;
+    transition: background-size 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .hover-line:hover,
+  .hover-line[aria-current='true'] {
+    background-size: 100% 1px;
+  }
+
+  /* A line of display type that slides up from behind a mask. */
+  .mask-line {
+    @apply block overflow-hidden;
+    padding-bottom: 0.06em;
+    margin-bottom: -0.06em;
+  }
+
+  .mask-line > span {
+    @apply block;
+  }
+
+  .marquee-track {
+    @apply flex w-max;
+  }
+
+  .custom-cursor {
+    @apply pointer-events-none fixed left-0 top-0 z-[9999] h-3.5 w-3.5 rounded-full border-2 border-white opacity-0 mix-blend-difference;
+    transition:
+      opacity 0.2s,
+      width 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+      height 0.3s cubic-bezier(0.65, 0, 0.35, 1),
+      background-color 0.3s;
+  }
+
+  .custom-cursor.is-visible {
+    @apply opacity-100;
+  }
+
+  .custom-cursor.is-active {
+    @apply h-14 w-14 bg-white;
+  }
 }
 
-.button1 {
-  border: 3px solid #906EF0;
-  padding: 5px 20px;
-  background-color: transparent;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 18px;
-  cursor: pointer;
-}
+/* ---------- Motion (all of it is skipped under prefers-reduced-motion) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* Page-load sequence in the hero: name lines rise, then the rule draws, then the rest fades in. */
+  .hero-intro .mask-line > span {
+    animation: rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
 
-.button1::before {
-  position: fixed;
-  top: -2px;
-  left: -2px; 
-  right: -2px;
-  bottom: -2px; 
-  z-index: -1;
-}
+  .hero-intro .mask-line:nth-child(2) > span {
+    animation-delay: 0.12s;
+  }
 
-.button1:hover {
-  background-color: #906EF0;
-  
-  transition: 350ms ease-in-out;
-}
+  .hero-intro .hero-rule {
+    transform-origin: left;
+    animation: draw 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.45s both;
+  }
 
-.button2 {
-  border: 3px solid #906EF0;
-  padding: 5px 20px;
-  background-color: transparent;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 14px;
-  cursor: pointer;
-}
+  .hero-intro .hero-fade {
+    animation: fade 0.9s ease 0.8s both;
+  }
 
-.button2::before {
-  position: fixed;
-  top: -2px;
-  left: -2px; 
-  right: -2px;
-  bottom: -2px; 
-  z-index: -1;
-}
+  /* Section headings reveal the same way when they scroll into view. */
+  .reveal-heading .mask-line > span {
+    transform: translateY(105%);
+    transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-.button2:hover {
-  background-color: #906EF0;
-  transition: 350ms ease-in-out;
-}
+  .reveal-heading .mask-line:nth-child(2) > span {
+    transition-delay: 0.1s;
+  }
 
-.button2 a:hover {
-  color: #ffffff;
-}
+  .reveal-heading .heading-rule {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.25s;
+  }
 
-.popup {
-  border: 3px solid #906EF0;
-  padding: 5px 20px;
-  background-color: transparent;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 14px;
-  cursor: pointer;
-}
+  .reveal-heading.is-visible .mask-line > span,
+  .reveal-heading.is-visible .heading-rule {
+    transform: none;
+  }
 
-.popup::before {
-  position: fixed;
-  top: -2px;
-  left: -2px; 
-  right: -2px;
-  bottom: -2px; 
-  z-index: -1;
-}
+  /* The mobile menu panel slides in from the right each time it opens. */
+  .mobile-panel {
+    animation: slide-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
 
-.popup:hover {
-  background-color: #906EF0;
-  
-  transition: 350ms ease-in-out;
-}
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+  }
 
-/*========== Cursor ===========*/
-/* Media query for Medium screens */
-@media screen and (min-width: 768px) {
-.custom-cursor {
-  width: 10px;
-  height: 10px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: width 0.2s, height 0.2s;
-}
-}
+  .marquee-track {
+    animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
 
-* {
-  cursor: none;
-}
+  @keyframes rise {
+    from {
+      transform: translateY(105%);
+    }
+  }
 
-/*========== Media Queries ===========*/
-@media (prefers-color-scheme: light) {
-  :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #1E1E1E;
+  @keyframes draw {
+    from {
+      transform: scaleX(0);
+    }
+  }
 
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
   }
 }

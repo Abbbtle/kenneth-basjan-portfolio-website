@@ -2,13 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/Images/Favicon/code.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark">
-    <title>Kenneth Basjan || Software Developer Portfolio</title>
+    <title>Kenneth Basjan — Software Development Engineer (AWS)</title>
+    <meta
+      name="description"
+      content="Kenneth Basjan is a Software Development Engineer at NTT DATA building cloud-native applications on AWS. Experience, skills, projects and contact details."
+    />
+    <link rel="canonical" href="https://kenneth-basjan.web.app/" />
+    <meta name="theme-color" content="#1E1E1E" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- The custom ring cursor (CustomCursor.jsx) replaces the system pointer on mouse and trackpad
+         devices. This is inline so the pointer is hidden from the very first paint, not only once
+         the app's JavaScript has loaded. -->
+    <style>
+      @media (hover: hover) and (pointer: fine) {
+        html,
+        html * {
+          cursor: none !important;
+        }
+
+        html :is(input, textarea, select, [contenteditable]) {
+          cursor: text !important;
+        }
+      }
+    </style>
+    <!-- Without JavaScript there's no ring, so keep the normal pointer. -->
+    <noscript>
+      <style>
+        html,
+        html * {
+          cursor: auto !important;
+        }
+      </style>
+    </noscript>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kenneth Basjan" />
+    <meta property="og:title" content="Kenneth Basjan — Software Development Engineer (AWS)" />
+    <meta
+      property="og:description"
+      content="Software Development Engineer at NTT DATA building cloud-native applications on AWS."
+    />
+    <meta property="og:url" content="https://kenneth-basjan.web.app/" />
+    <meta property="og:image" content="https://kenneth-basjan.web.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Kenneth Basjan, Software Development Engineer, AWS and cloud-native, NTT DATA"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kenneth Basjan — Software Development Engineer (AWS)" />
+    <meta
+      name="twitter:description"
+      content="Software Development Engineer at NTT DATA building cloud-native applications on AWS."
+    />
+    <meta name="twitter:image" content="https://kenneth-basjan.web.app/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kenneth Basjan",
+        "jobTitle": "Software Development Engineer",
+        "worksFor": { "@type": "Organization", "name": "NTT DATA" },
+        "url": "https://kenneth-basjan.web.app/",
+        "image": "https://kenneth-basjan.web.app/og-image.png",
+        "sameAs": ["https://www.linkedin.com/in/kenneth-basjan/", "https://github.com/Abbbtle"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      Kenneth Basjan, Software Development Engineer (AWS). This site needs JavaScript; you can also find me on
+      <a href="https://www.linkedin.com/in/kenneth-basjan/">LinkedIn</a>.
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
